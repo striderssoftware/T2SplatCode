@@ -1,0 +1,27 @@
+
+--------------------------
+#254
+There is a ton of killer debugging stuff this video
+
+--------------------------
+#255
+This has some Bondo stuff.
+element HeadBondo : Bondo 
+and
+M2 objects
+
+Note: I can not find this stuff in the GIT (MFM, ULAM, SPLAT) code.
+
+--------------------------
+#259
+Introduced Membrane Parameters  (MP)
+
+The idea of the: Micro Computon
+
+Moving to a new image on Beagle Greens:
+Debian 9.9 2019-08-03 4GB SD IoT    (This is what I am running at home))
+
+The Beagle Green code.
+Robert Nelson
+
+

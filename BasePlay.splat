@@ -1,0 +1,14 @@
+= quark BasePlay. The parent class of inner and outer membrane
+\symmetries all
+
+== Rules
+given @ isa Play
+given i isa Play2
+
+  iii      ___
+  i@i  ->  _i_   # Turn in (eliminate surrounded play) 
+  iii      ___
+
+== Postrules: Last ditch hold
+
+  @ -> .

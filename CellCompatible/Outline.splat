@@ -1,0 +1,28 @@
+#####
+= element Outline
+\symbol oo
+\color #630
+\symmetries all
+
+
+== Rules: 
+given @ isa Outline
+given o isa Outline
+#given b isa InnerMembrane
+given b isa OuterMembrane
+
+  b_       .@
+  b@   ->  ..    # Outline Inline
+
+  _     @
+  b@ -> b.       # corner
+  bo    bo
+
+
+  bb_    bb@
+  b@  -> b.      # corner 
+
+
+== Postrules: Last ditch hold
+
+  @ -> .

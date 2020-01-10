@@ -1,0 +1,7 @@
+
+1. get this working where as you build the music "sheet" you place random notation seeds as you go and see what you get.
+
+2. Create a "music sheet" and then just make notes in the world and have them wander around and if they encounter a "music sheet" they will place themselves into it.
+
+3. Have a "composer" object, that would wander around and if it encounters a "music sheet" it will compose a score into/onto it.
+

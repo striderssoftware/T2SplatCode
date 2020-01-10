@@ -1,0 +1,32 @@
+= element GetCoord2
+\symbol GC
+\color #0ff
+\symmetries all
+
+== Data members
+
+== Rules
+
+given w isa Wall 
+vote  w {
+. return 1u;
+.}
+
+
+check @ {
+. DebugUtils db;
+. db.print("**************** testing getCoord");
+. db.print("**************** getCoord ");
+. if ( $w.$nvotes > 0u )
+. {
+.   db.print(ew.getCoord($w.$picksn));
+.   db.print(ew.getSiteNumber(ew.getCoordRaw($w.$picksn)));
+.  }
+. return 1u;
+.}
+
+   _@www -> @@...
+
+   @ -> @
+
+== Methods

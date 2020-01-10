@@ -1,0 +1,24 @@
+= element PassiveProteins
+\symbol PS
+\color #902
+\symmetries all
+
+
+== Rules
+
+given i isa InnerMembrane
+given o isa OuterMembrane
+given q isa QContent
+
+   @_ -> _@
+
+   @oi_ -> _oi@
+
+   @i -> @i
+
+   @o -> @o
+
+   @q -> q@
+
+   @ -> @
+   

@@ -1,0 +1,13 @@
+= element Swap
+\symbol Sw
+\color #f0f
+#\symmetries all
+
+== Rules
+given @ isa Swap{
+. ew.swap(9u, 0u);
+.}
+
+
+   @ -> @
+   

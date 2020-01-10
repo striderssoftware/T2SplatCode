@@ -1,0 +1,23 @@
+
+
+------------------
+Attempted to have a "pointer" to another Element 
+
+ ERROR: Data member <mylink> of type: Link2, is an element, and is NOT permitted; Local variables, quarks, and Model Parameters do not have this restriction.
+
+------------------
+Attempted to do an upcast, cast from a bass class to a derived class.
+
+ERROR: Explicit Reference casts (Type&) are valid for reference variable initialization (including function call arguments); not in this context.
+
+-------------------
+ERROR: Trying to exceed allotted bit size (32) for quark QLink with 33 bits.
+
+-------------------
+ERROR: Reference as data member; Not supported.
+
+-------------------
+ If I try a reference to a Quark - the object fails compilation on a missing curly brace.
+ ERROR: Empty/Incomplete Class Definition 'Parent'; Possible missing ending curly brace.
+-------------------
+

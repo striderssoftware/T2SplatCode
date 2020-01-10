@@ -1,0 +1,17 @@
+= element TunnelBuilder
+\symbol TB
+\color #ff0
+
+
+== Rules
+given @ isa TunnelBuilder{
+. DebugUtils db;
+. db.print("*****given @ isa TunnelBuilder was called");
+. Wall wall;
+. ew[2] = wall;
+. ew[3] = wall;
+.}
+
+   @_ -> _@
+
+   @ -> @

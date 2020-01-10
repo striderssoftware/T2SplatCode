@@ -1,0 +1,14 @@
+
+This was really just for fun, to practice splat code and to use Seeds to create objects.
+The only interesting thing is that the objects that are used to "create" the tree die when they 
+have finished their jobs. The Tree that is left is a collection of lights and really "knows" nothing about trees, least wise an XMasTree.
+
+The Tree that is created cannot be Hacked to create a new tree, it does not have the code. 
+
+but, this begs the question, the code to create an XMas tree lives somewhere on the system (XmasSeed.splat) so whatever created the XmasSeed
+could be hacked to create a new XmasTree. hmmmm???
+
+
+
+ 
+

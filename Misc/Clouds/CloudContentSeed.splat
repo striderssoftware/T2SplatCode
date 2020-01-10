@@ -1,0 +1,27 @@
+= element CloudContentSeed isa QContent
+\symbol CCS
+\color #fff
+\symmetries all
+
+
+== Rules
+given i isa InnerMembrane
+
+ @i -> @i
+
+given o isa OuterMembrane
+
+ @o -> @o
+
+ _@o -> @_o
+
+change p isa CloudContent
+
+   @_ -> p@
+
+   @_ -> _@
+
+== Postrules: Last ditch hold
+
+  @ -> .
+

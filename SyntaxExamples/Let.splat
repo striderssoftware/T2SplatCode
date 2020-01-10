@@ -1,0 +1,17 @@
+= element Let
+\symbol L
+\color #00f
+\symmetries all
+
+== Rules
+
+given w isa Wall
+given s isa Stationary
+
+let x = w | s
+
+   x@x -> _@_
+
+   
+   @   -> @
+   

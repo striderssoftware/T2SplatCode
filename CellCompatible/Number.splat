@@ -1,0 +1,22 @@
+= element Number isa QContent
+\symbol N
+\color #03f
+\symmetries all
+== Data members
+u Unsigned aNum = 1;
+
+== Rules
+given i isa InnerMembrane
+
+ @i -> @i
+
+given o isa OuterMembrane
+  @o -> @o
+  
+ _@o -> @_o
+
+# number rules
+
+  @_ -> _@
+  
+  @ -> @

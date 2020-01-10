@@ -1,0 +1,20 @@
+= element SimpleContentCell
+\symbol SSS
+\color #0f0
+\symmetries all
+
+== Rules
+change i isa InnerMembrane
+change o isa OuterMembrane
+change s isa SimpleContentSeed
+
+  ......    oooooo
+  ......    oiiiio
+  ...@.. -> oissio
+  ......    oiiiio
+  ......    oooooo
+
+  
+
+
+

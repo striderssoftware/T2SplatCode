@@ -1,0 +1,12 @@
+
+= element WormSegment
+\symbol ws
+\color #0aa
+\symmetries all
+
+== Data members
+
+== Rules
+
+   @ -> @
+

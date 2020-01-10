@@ -1,0 +1,58 @@
+
+***************************************
+The physical board:
+*******************
+The current BeagleBoard in use (10/7/19):
+https://beagleboard.org/green
+
+Debian 8.7 2017
+
+--------
+12/09/19 - Moving to Debian 9.9 2019-08-03 4GB SD IoT
+See below, that is what I am running at home on the Green.
+
+***************************************
+images:
+*******
+
+I have burned numerous debian img's into a micro disk and ran them on a BeagleBoard Green.
+
+I am getting the images from here:https://beagleboard.org/latest-images
+
+I think the last image I used succesfully was the IoT image 
+Debian 9.9 2019-08-03 4GB SD IoT
+
+***************************************
+image info:
+***********
+
+cat /etc/lsb-release
+
+cat /etc/debian_version
+
+uname -a
+
+https://linuxconfig.org/check-what-debian-version-you-are-running-on-your-linux-system
+
+***************************************
+software:
+*********
+
+Question: What is actually running on the physical tiles? 
+
+1. What image was/is installed on the beagleGreen T2Tile?
+2. What from the T2 Tile repo is built and run on the beagelGreen T2Tile?
+
+I have found an MFM lib here:
+/home/dlucero/code/T2_TileProject/MFM/build/platform-linux\libmfmplatform-linux.a
+
+
+***************************************
+The MFM :
+****************
+
+How are edges handled?  (the MFM NOT a tile)
+Often this is done:
+These cells are usually handled with a toroidal arrangement: when one goes off the top, one comes in at the corresponding position on the bottom, and when one goes off the left, one comes in on the right.
+
+but, I believe that cannot be done with the MFM.

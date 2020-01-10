@@ -1,0 +1,28 @@
+= element Check
+\symbol CK
+\color #0a0
+\symmetries all
+
+== Rules
+
+# check will be called at each event, returning true will cause the rules to be
+# done, returning false will cause the rules to NOT be done. And your guy will
+# die.
+
+check @ {
+. DebugUtils db;
+. db.print("check was called");
+#. Check & cc = (Check &)ew[0];
+#. ew[1] = cc;
+. return true;
+.}
+
+given Z isa Wall
+
+   @_ -> _@   
+
+   @Z_ -> @ZZ
+
+   @ZZ -> @ZZ
+
+   @ -> @

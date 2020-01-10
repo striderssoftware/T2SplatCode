@@ -1,0 +1,32 @@
+#####
+= element OutlineTwo
+\symbol ot
+\color #630
+\symmetries all
+
+
+== Rules: 
+given @ isa OutlineTwo
+given o isa OutlineTwo
+given b isa Wall
+
+
+  b_       .@
+  b@   ->  ..    # Complete line of numbers
+
+
+  b_       b@
+  o@   ->  oo   # complete Corner
+
+  __    _@
+  b@ -> b.       # Prepare to corner
+  bo    bo
+
+
+  bb      bb
+  b@_  -> b.@    # Prepare to corner 
+
+
+== Postrules: Last ditch hold
+
+  @ -> .

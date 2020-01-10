@@ -1,0 +1,41 @@
+= element Link isa QLink
+\symbol L
+\color #00b
+\symmetries all
+
+== Data members
+u QLink  mylink;
+u Bool bDoIt = true;
+u Bool bCreateNew = true;
+
+== Rules
+given @ isa Link{
+. DebugUtils db;
+#. db.print("***************Link is doing somehing***");
+. if ($self.bDoIt)
+. {
+. if ( $self.bCreateNew )
+. {
+. db.print("******** You should ONLY see this ONCE ***");
+.  $self.bCreateNew = false;
+.  Link ll;
+.  ll.bCreateNew = false;
+.  ll.bDoIt = false;
+.  ew[1] = ll; 
+.  $self.mylink = ll;
+. }
+. $self.mylink.callYou();
+. }
+. db.print($self.aNumber);
+.}
+
+   @_ -> _@
+
+   @ -> @
+
+== Methods
+u Void callMe(){
+. DebugUtils db;
+#. db.print("********call me was called");
+#. db.print(self.bDoIt);
+.}

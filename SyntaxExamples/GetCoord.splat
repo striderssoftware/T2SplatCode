@@ -1,0 +1,27 @@
+= element GetCoord
+\symbol GC
+\color #0ff
+\symmetries all
+
+== Data members
+
+== Rules
+
+given e isa Empty {
+. DebugUtils db;
+. db.print("**************** testing getCoord");
+. db.print("**************** getCoord ");
+. db.print(ew.getCoord($cursn));
+. db.print("**************** getCoordRaw");
+. db.print(ew.getCoordRaw($cursn));
+. db.print("**************** mapsym(getcoord");
+. db.print(ew.mapSym(ew.getCoord($cursn)));
+. db.print("**************** getSiteNumber(mapsym(getCoord");
+. db.print(ew.getSiteNumber(ew.mapSym(ew.getCoord($cursn))));
+.}
+
+   @e -> e@
+
+   @ -> @
+
+== Methods

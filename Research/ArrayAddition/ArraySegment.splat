@@ -1,0 +1,32 @@
+= element ArraySegment
+\symbol AS
+\color #071
+\symmetries all
+
+== Data members
+u Unsigned index = 1u;
+u Unsigned value = 0u;
+
+== Rules: init
+check @ {
+. DebugUtils db;
+#. db.print("Array Segment init called ********");
+. return true;
+.}
+
+  @ -> @
+
+
+== Methods
+
+getColor {
+. DebugUtils db;
+. db.print("********** getColor was called ****************");
+. ARGB ret;
+. if ( value > 0u )
+.   ret = cu.color(0x00,0xf0,0x0);
+. else
+.   ret = cu.color(0x00,0x70,0x10);
+. return ret;
+.}
+

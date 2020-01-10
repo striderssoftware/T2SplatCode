@@ -1,0 +1,5 @@
+local constant Int foo = 3;
+element MyFoo : DebugUtils {
+  Void behave() { print(foo); }
+}
+

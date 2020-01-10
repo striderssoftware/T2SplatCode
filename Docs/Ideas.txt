@@ -1,0 +1,108 @@
+
+----------------------------------------------------------
+How will Input, Output work.
+
+Input: It will just be in some other part of the machine. :)
+
+Output: 
+
+----------------------------------------------------------
+Worms:
+
+Made a WormLarva.
+Will I need a Worm Head as a different object then a WormSegment.
+I believe YES.
+
+How is this related to the Bondo Stuff presented in T2 Update #254
+similar in implementation perhaps.
+
+----------------------------------------------------------
+Adding program:
+
+1. have a Number Type that is a object that contains a number.
+2. Have an Adder object - if it is ever touches either a number object or another adder object adds that number to itself and deletes the other object.
+
+
+Scatter a bunch of "number" objects in the simulator. Cut loose some adder objects and when there is only one adder object that is the sum of all the numbers that were in the "space" i.e - simulator.
+
+
+
+Result:
+This works, if bounded by a wall the adder(s) will add up the numbers and themselfs and come up with a correct total.
+
+
+
+
+----------------------------------------------------------
+Adding program:
+
+Cell Result:
+The adder idea works when put in a cell unless the cell
+closes up on the "content" seperating the adder(s) from
+the numbers.
+
+I have tried to hack the cells to NOT close up on the "content"
+but that has been un-sucessfull. And, I am not sure this is the right
+approach.
+
+----------------------------------------------------------
+An Energetic, corrosive environment:
+------------------------------------
+Adding Program:
+
+The adder "program" needs to survive and produce the correct or "best effort" result in a Energetic, corrosive environment.
+
+This means the Adder program needs to be robost enough to handle the deletion of numbers and or adders as the computation progresses.
+
+I have an idea that I think will work, but it depends on the
+adders having an array of values.
+
+so,
+Can a make an adder that has an array??
+
+(array usage:MFM/src/core/include/EventWindow.h)
+
+NO, one cannot make an array. 
+
+I had my suspicions because having an (dynamic)array would allow an object to
+take "unlimited" resources.
+
+Is "WORMS" the only thing I got!
+
+-----------
+BEST EFFORT:
+Maybe I need to hang my hat on "Best Effort", I was playing with
+adders and numbers in a cell with DReg (with general destruction set to 100)
+and:
+with 20 numbers and 5 dregs, 5 adders, I have gotten as high as 90%
+score of adding up all the numbers.
+
+The cell closing up on me is still causing more errors then the DRegs.
+
+1. 90%
+2. 80%
+3. 50% (cell closed up on me)
+
+----------------------------------------------------------
+
+• Don’t create or destroy DR; only DR itself does that.
+• Don’t grow unless we can consume R to do so. And,
+• DR creates R ‘de novo’, but we can create R only if we destroy something previously made from R.
+
+If our computation can persist and make progress while co-existing with DReg,
+we will have a limited but legitimate basis for calling it ‘robust’.
+
+----------------------------------------------------------
+To be robust you need thick relationships.
+Lots of dimensions of contact, lots of shared histories, lots of forward expectations about interactions.
+
+Crypto tries to finesse all of that in favor of a single secret.
+Plus deterministic math.
+----------------------------------------------------------
+computome
+
+----------------------------------------------------------
+
+
+
+

@@ -1,0 +1,20 @@
+= element Worm
+\symbol WM
+\color #0dd
+\symmetries all
+
+== Data members
+u Unsigned uCount = 0u;
+u Bool bInCreation = true;
+
+== Rules
+check @ {
+. DebugUtils db;
+. db.print("check was called");
+. Worm & wm = (Worm &)ew[0];
+. ew[1] = wm;
+. return false;
+.}
+
+   @ -> @
+

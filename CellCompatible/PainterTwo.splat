@@ -1,0 +1,26 @@
+= element PainterTwo isa QContent
+\symbol P2
+\color #364
+\symmetries all
+
+== Rules
+given i isa InnerMembrane
+
+ @i -> @i
+
+given o isa OuterMembrane
+
+ @o -> @o
+
+ _@o -> @_o
+
+change p isa Paint
+
+   @_ -> p@
+
+given p isa Paint
+
+   @p -> p@
+
+   @_ -> _@
+ 

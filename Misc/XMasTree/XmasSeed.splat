@@ -1,0 +1,35 @@
+= element XmasSeed
+\symbol XS
+\color #ff4
+#\symmetries all
+
+== Data members
+u Unsigned uCount = 1u;
+
+== Rules: Germination
+
+given @ isa XmasSeed {
+. DebugUtils db;
+#. db.print("seed called ***********************");
+. if ( $self.uCount > 120u )
+.   return false;
+. LightedTreeRow row;
+. row.colCount = $self.uCount;
+. ew[4] = row;
+. XmasSeed seed;
+. seed.uCount = $self.uCount + 2u;
+. ew[$cursn] = seed;
+. return true;
+.}
+
+  @ ->  _
+ _     @
+
+
+
+
+
+
+
+
+

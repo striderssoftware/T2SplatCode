@@ -1,0 +1,20 @@
+= element PainterOneCell
+\symbol P1C
+\color #0f0
+\symmetries all
+
+== Rules
+change i isa InnerMembrane
+change o isa OuterMembrane
+change s isa PainterOne
+
+  .....    ooooo
+  .....    oiiio
+  ..@.. -> oisio
+  .....    oiiio
+  .....    ooooo
+
+  
+
+
+

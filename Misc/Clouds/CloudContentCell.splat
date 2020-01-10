@@ -1,0 +1,20 @@
+= element CloudContentCell
+\symbol SSS
+\color #0f0
+\symmetries all
+
+== Rules
+change i isa InnerMembrane
+change o isa OuterMembrane
+change c isa CloudContentSeed
+
+  ......    oooooo
+  ......    oiiiio
+  ...@.. -> oiccio
+  ......    oiiiio
+  ......    oooooo
+
+  
+
+
+

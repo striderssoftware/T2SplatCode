@@ -1,0 +1,60 @@
+= element MusicSeed
+\symbol MS
+\color #00f
+#\symmetries all
+
+== Data members
+u Unsigned uCount = 11u;
+u Unsigned uTotalCount = 46u;
+
+== Rules: Germination
+
+given @ isa MusicSeed {
+. DebugUtils db;
+#. db.print("seed called ***********************");
+. if ( $self.uTotalCount < 1u )
+.   return true;
+.
+. MusicSeed seed;
+. seed.uTotalCount = $self.uTotalCount - 1u;
+.
+. Line staffLine;
+. Space spaceLine;
+#. db.print($self.TotalCount);
+. if ( $self.uCount > 1u )
+. {
+.  if ( $self.uTotalCount  % 2u == 0u )
+.  {
+#.   db.print("*************creating line");
+.   staffLine.colCount = 50u;
+.   ew[4] = staffLine;
+.  }
+.
+.  if ( $self.uTotalCount  % 2u != 0u )
+.  {
+#.   db.print("*************creating line");
+.   spaceLine.colCount = 50u;
+.   ew[4] = spaceLine;
+.  }
+. }
+.
+.
+. seed.uCount = $self.uCount -1u;
+.
+. if ( $self.uCount < 1u )
+.   seed.uCount = 11u;
+.
+.  ew[3] = seed;
+.
+. return false;
+.}
+
+  @ -> _
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+
+This dir is for Objects that are Cell Compatible. Objects that do not move or do anything on their own are NOT considered Cell Compatible even though they do not harm the Cell. Only items that can "do their thing" while inside a Cell are considered Cell Compatible. For instace Paint objects are in here only because a PainterTwo object can "paint" inside a cell without harming it, and Painters use Paint.
+
+
+
+Some of these objects have this code
+----code-------
+== Rules
+given i isa InnerMembrane
+
+ @i -> @i
+
+given o isa OuterMembrane
+
+  @o -> @o
+
+ _@o -> @_o
+
+----end code -----------
+
+some do not.
+
+These are rules I placed in objects to make them "better" Cell Behaved. But PainterOne and Paint do NOT have these rules and they are fine in a Cell. For now leave it that way.
+
+PainterOne is Cell Compatible only if "hand drawn" in a cell with space around it. I made cell creation objects for PainterOne and PainterTwo and PainterOne will break out of the cell ocasionally.
+
+PainterOne will stay in this dir for now but if I can not fix this it probobly should move out. Back to research.

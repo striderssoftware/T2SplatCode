@@ -1,0 +1,23 @@
+= element AdderEater
+\symbol AE
+\color #970
+\symmetries all
+== Data members
+u Unsigned aNum = 0;
+
+== Rules
+given n isa Adder{
+. DebugUtils db;
+. db.print("************************why me why me why me");
+. AdderEater & addEatMe = (AdderEater&) ew[0];
+. AdderEater addEat;
+. addEat.aNum = addEatMe.aNum + $self.aNum;
+. ew[$cursn] = addEat;
+.}
+
+   @_ -> _@
+
+   @n -> @_
+
+   @ -> @
+   

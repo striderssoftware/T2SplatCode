@@ -1,0 +1,9 @@
+= element Wall
+\symbol W
+\color #fff
+\symmetries all
+
+== Rules
+
+  @ -> @
+  

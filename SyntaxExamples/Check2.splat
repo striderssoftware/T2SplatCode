@@ -1,0 +1,19 @@
+= element Check2
+\symbol C2
+\color #049
+#\symmetries all
+
+
+== Rules
+
+== Rules:
+check @ : random.oneIn(100)
+
+  @ -> _
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+
+

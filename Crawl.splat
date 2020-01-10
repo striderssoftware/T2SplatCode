@@ -1,0 +1,21 @@
+= element Crawl isa QContent
+\symbol CR
+\color #06a
+#\symmetries all
+
+== Data members
+u Unsigned uCount = 0u;
+
+== Rules
+
+== Rules:
+check @ : random.oneIn(50)
+
+  @_ ->  _@
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+
+

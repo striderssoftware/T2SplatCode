@@ -1,0 +1,40 @@
+= element RAdder
+\symbol RA
+\color #0f8
+\symmetries all
+
+== Data members
+u Unsigned uCount = 10;
+u Unsigned uNum = 0;
+u Unsigned uArray[10];
+u Unsigned uTotal = 0;
+u Unsigned uBirthRate = 1;
+
+== Rules
+given n isa Number{
+. DebugUtils db;
+. db.print("*****found a number");
+. Adder & addMe = (Adder&) ew[0];
+. Adder add;
+. add.aNum = addMe.aNum + $self.aNum;
+. ew[$cursn] = add;
+.}
+
+   @_ -> _@
+
+   @n -> @_
+
+
+given a isa Adder{
+. DebugUtils db;
+. db.print("************************why me why me why me");
+. Adder & add = (Adder & )ew[0];
+. Adder newAdd;
+. newAdd.aNum = add.aNum + $self.aNum;
+. ew[$cursn] = newAdd;
+. ew[$winsn] = Empty.instanceof;
+.}
+
+   @a -> a@
+
+   @ -> @

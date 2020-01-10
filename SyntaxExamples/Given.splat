@@ -1,0 +1,18 @@
+= element Given
+\symbol GV
+\color #009
+#\symmetries all
+
+== Rules:
+given @ isa Given{
+. return random.oneIn(100);
+.}
+
+  @ -> _
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+
+

@@ -1,0 +1,13 @@
+= element RNumber isa QContent
+\symbol RN
+\color #03f
+\symmetries all
+
+== Data members
+u Unsigned uNum = 1;
+u Unsigned uIndex = 1;
+u Unsigned uBirthrate = 1;
+
+== Rules
+
+   @ -> @

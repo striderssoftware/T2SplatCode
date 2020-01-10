@@ -1,0 +1,66 @@
+= element ContentTestSeed isa QContent
+\symbol CTS
+\color #333
+\symmetries all
+
+== Data members
+u Bool bIsColorSet = true;
+u ARGB mycolor;
+u Unsigned count = 0u;
+
+
+== Rules
+given i isa InnerMembrane
+
+  _@i -> @_i
+
+given o isa OuterMembrane
+
+ _@o -> @_o
+
+ @o -> @o
+
+given w isa Empty
+vote  w {
+. return 1u;
+.}
+
+
+check @ {
+. DebugUtils db;
+#. db.print("**************** testing getCoord");
+#. db.print("**************** getCoord ");
+. if ( $w.$nvotes > 0u )
+. {
+.   db.print(ew.getCoord($w.$picksn));
+.   db.print(ew.getSiteNumber(ew.getCoordRaw($w.$picksn)));
+.   ew.swap(0u, ew.getSiteNumber(ew.getCoordRaw($w.$picksn)));
+.   ContentTest p;
+.   ew[0] = p;
+.   return 0u;
+. }
+. return 1u; 
+.}
+
+   _@w -> _@w
+
+   @ -> @
+
+
+== Methods
+
+getColor {
+. DebugUtils db;
+#. db.print("********** getColor was called ***debug*************");
+. ARGB ret;
+. ret = cu.color(0x00,0xf0,0x00);
+. Unsigned var = count % 3u;
+. if ( var == 0u )
+.   ret = cu.color(0x00,0x00,0xf0);
+. if ( var == 1u )
+.   ret = cu.color(0xf0,0x00,0x00);
+. if ( var == 2u )
+.   ret = cu.color(0x00,0xf0,0x00);
+. return ret;
+.}
+

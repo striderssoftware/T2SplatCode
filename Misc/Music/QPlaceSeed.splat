@@ -1,0 +1,41 @@
+= quark QPlaceSeed. The parent class of all notations
+\symmetries all
+
+
+== Methods
+u Void placeSeed(){
+. DebugUtils db;
+#. db.print("********place seed was called");
+.
+. Random r;
+. EventWindow ew;
+. if ( r.oneIn(20) )
+. {
+.  Bool bDidit = false;
+.
+.  if ( r.oneIn(3) )
+.  {
+.    NoteSeed s;
+.    bDidit = true;
+.    ew[1] = s;
+.  }
+.
+.  if ( !bDidit && r.oneIn(3) )
+.  {
+.    RunSeed s;
+.    bDidit = true;
+.    ew[1] = s;
+.  }
+.
+.  if ( !bDidit )
+.  {
+.    ChordSeed s;
+.    ew[1] = s;
+.  }
+.
+. }
+.}
+
+
+
+

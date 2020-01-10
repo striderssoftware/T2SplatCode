@@ -1,0 +1,52 @@
+= element ContentTest isa QContent
+\symbol CT
+\color #05f
+\symmetries all
+
+== Data members
+u Bool bIsColorSet = true;
+u ARGB mycolor;
+u Unsigned count = 0u;
+
+== Rules
+given i isa InnerMembrane
+
+ @i -> @i
+
+given o isa OuterMembrane
+
+ @o -> @o
+
+ _@o -> @_o
+
+
+given s isa ContentTestSeed
+
+      @s -> @s
+
+given @ isa ContentTest{
+. $self.bIsColorSet = ! $self.bIsColorSet;
+. $self.count = $self.count + 1u;
+.}
+
+   @_ -> _@
+
+   @ -> @
+
+== Methods
+
+getColor {
+. DebugUtils db;
+#. db.print("********** getColor was called ***debug*************");
+. ARGB ret;
+. ret = cu.color(0x00,0xf0,0x00);
+. Unsigned var = count % 3u;
+. if ( var == 0u )
+.   ret = cu.color(0x00,0x00,0xf0);
+. if ( var == 1u )
+.   ret = cu.color(0xf0,0x00,0x00);
+. if ( var == 2u )
+.   ret = cu.color(0x00,0xf0,0x00);
+. return ret;
+.}
+

@@ -1,0 +1,42 @@
+= element ArraySeed
+\symbol AS
+\color #f00
+#\symmetries all
+
+== Data members
+u Unsigned uCurrentIndex = 1u;
+u Unsigned uSize = 24;
+
+
+== Rules: Germination
+
+given @ isa ArraySeed{
+. DebugUtils db;
+. db.print("seed called ***********************");
+. if ( $self.uCurrentIndex > $self.uSize )
+.   return false;
+. ArraySegment aseg;
+. aseg.index = $self.uCurrentIndex;
+. ew[1] = aseg;
+. ArraySeed seed;
+. seed.uCurrentIndex = $self.uCurrentIndex + 1u;
+. ew[$cursn] = seed;
+. return true;
+.}
+
+given s isa ArraySegment{
+. DebugUtils db;
+. db.print("***********given s isa ArraySegment ***********************");
+#. $self.uCount = 4u;
+.}
+
+  s@_ -> s_@
+  
+  @ -> @
+
+
+
+
+
+
+

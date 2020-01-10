@@ -1,0 +1,33 @@
+= element ANumber isa QContent
+\symbol AN
+\color #0f3
+\symmetries all
+
+== Data members
+u Unsigned aNum = 3u;
+u Unsigned index = 7u;
+
+== Rules
+given @ isa ANumber
+given a isa ArraySegment{
+. DebugUtils db;
+. db.print("*************************** found  array *** who ");
+. ANumber & anumber = (ANumber &) ew[0];
+. if ( $self.index == anumber.index )
+. {
+.   $self.value = anumber.aNum;
+. }
+# Clear area around Array(s)
+#. ew[0] = Empty.instanceof;
+.}
+
+  a_       .@
+  a@   ->  ._    # walk the array
+
+given n isa ANumber
+
+  @na  ->  _@a 
+
+  @_ -> _@
+
+  @ -> @

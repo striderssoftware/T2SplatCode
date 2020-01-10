@@ -1,0 +1,6 @@
+#####
+= element Play2 isa BasePlay
+\symbol p2
+\color #0f0
+\symmetries all
+

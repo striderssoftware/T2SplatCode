@@ -1,0 +1,16 @@
+= element Vote0
+\symbol V0
+\color #009
+#\symmetries all
+
+== Rules:
+vote @ isa Vote0 : random.oneIn(100)
+
+  @ -> _
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+
+

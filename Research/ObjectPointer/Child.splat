@@ -1,0 +1,16 @@
+= element Child isa QChild
+\symbol Ci
+\color #004
+\symmetries all
+
+== Rules
+given @ isa Child {
+. DebugUtils db;
+. db.print("**********given child called**********");
+. db.print($self.aNumber);
+.}
+
+   @_ -> _@   
+
+   @ -> @
+

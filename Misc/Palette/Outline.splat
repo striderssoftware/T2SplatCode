@@ -1,0 +1,28 @@
+#####
+= element Outline
+\symbol oo
+\color #630
+\symmetries all
+
+
+== Rules: 
+given @ isa Outline
+given o isa Outline
+given b isa Wall
+
+
+  b_       .@
+  b@   ->  ..    # Complete line of numbers
+
+  _     @
+  b@ -> b.       # corner
+  bo    bo
+
+
+  bb_    bb@
+  b@  -> b.      # corner 
+
+
+== Postrules: Last ditch hold
+
+  @ -> .

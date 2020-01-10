@@ -1,0 +1,33 @@
+= element IChingWIM
+\symbol WIM
+\color #fff
+#\symmetries all
+
+== Data members
+u Unsigned count = 1u;
+
+== Rules
+
+given @ isa IChingWIM {
+. DebugUtils db;
+. db.print (" ******* hello from  IChing  *****");
+. if ( $self.count < 100u )
+. {
+.  IChingWIM ic;
+.  ic.count = $self.count + 1u;
+.  ew[$cursn] = ic;
+. }
+. 
+. if ( $self.count >= 100u )
+. {
+.   OuterMembrane om;
+.   InnerMembrane im;
+.   ew[1] = im;
+.   ew[6] = om;
+.   ew[0] = Empty.instanceof;
+. }
+.}
+
+  @ -> @
+
+

@@ -1,0 +1,47 @@
+= element ArraySeed
+\symbol AS
+\color #f00
+#\symmetries all
+
+== Data members
+#. parameter Unsigned uOffset = 0u;
+#u unsigned paramater uCount = 0;
+u Unsigned uOffset = 0u;
+
+== Rules: Germination
+given @ isa ArraySeed{
+. DebugUtils db;
+. db.print("seed called ***********************");
+. ArraySegment aseg;
+. Unsigned offset =  $self.uOffset;
+. aseg.index = 1u + offset;
+. ew[1] = aseg;
+. aseg.index = 2u + offset;
+. ew[9] = aseg;
+. aseg.index = 3u + offset;
+. ew[21] = aseg;
+. aseg.index = 4u + offset;
+. ew[37] = aseg;
+. ArraySeed & addsed = (ArraySeed &) ew[0];
+. ArraySeed seed;
+. seed.uOffset = 4u + addsed.uOffset;
+. ew[$cursn] = seed;
+. return true;
+.}
+
+given s isa ArraySegment{
+. DebugUtils db;
+. db.print("***********given s isa ArraySegment ***********************");
+#. $self.uCount = 4u;
+.}
+
+ s@____ -> s....@
+
+
+      @ -> @
+
+
+
+
+
+

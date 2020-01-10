@@ -1,0 +1,31 @@
+= element PainterOne isa QContent
+\symbol P1
+\color #576
+\symmetries all
+
+== Rules
+given i isa InnerMembrane
+
+ @i -> @i
+
+given o isa OuterMembrane
+
+ @o -> @o
+
+ _@o -> @_o
+
+given e isa Empty {
+. DebugUtils db;
+. db.print("*****given @ isa PainterOne was called");
+. Paint p;
+. ew[$cursn] = p;
+. return false;
+.}
+
+given p isa Paint
+
+   @e -> e@
+
+   @p -> p@
+
+   @ -> @

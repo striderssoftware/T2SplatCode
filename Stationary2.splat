@@ -1,0 +1,9 @@
+= element Stationary2
+\symbol s2
+\color #35f
+\symmetries all
+
+== Rules
+
+  @ -> @
+  

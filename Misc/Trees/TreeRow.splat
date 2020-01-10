@@ -1,0 +1,42 @@
+= element TreeRow
+\symbol TR
+\color #0f0
+#\symmetries all
+
+== Data members
+u Unsigned colCount = 0u;
+u Unsigned uOffset = 0u;
+
+
+== Rules: Germination
+
+given @ isa TreeRow{
+. DebugUtils db;
+#. db.print("seed called ***********************");
+.
+. if ( $self.colCount <= 0u ) 
+.   return false;
+.
+. if ( $self.uOffset <= 0u )
+. {
+.   PaintGreen gn;
+.   ew[1] = gn;
+. }
+.
+. $self.colCount = $self.colCount - 1u;
+. $self.uOffset = $self.uOffset - 1u;
+. return true;
+. }
+
+given s isa PaintGreen
+
+  @_ -> _@
+  
+  @ -> @
+
+
+
+
+
+
+

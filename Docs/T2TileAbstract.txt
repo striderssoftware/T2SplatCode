@@ -1,0 +1,37 @@
+
+(Note: these are MY thoughts and may or may not be correct)
+  My Understanding of the T2 Tile Project:
+
+  The "real" world in which we operate has noise.
+  Any complex (non trivial) system built upon it will have noise.
+
+  The interface of a "hardware unit" (a T2 Tile) is whatever we want it to be.
+  What we want it to be is open for discussion but the Harware Unit, or a Tile
+  MUST accurately reflect any noise in the system. It must be HONEST. It must
+  reflect the physics of the world in which it operates not attempt to provide
+  a safer version to the layers above.
+
+  It does not matter that the T2 Tile is Linux and RAM underneath.
+  The interface a Hardware Unit exposes to the layers above is the blueprint
+  for what a T2 Tile Hardware Unit will be.
+
+  The T2 Projects current machine is a simulator to learn what an MFM machine will look like.
+
+  The project wants to determine what "systems" will/can survive/arise when the Hardware Unit
+  must expose system noise (the physics of the "real" world) in its interface.
+
+  A process/program MUST be robust to survive in this "Mad Max" Universe.
+  There can be NO Central Control in the MFM.
+  System integerity is "enforced" by the "physics of the MFM"
+  (Hopefully: by exposing the physics of the real world).
+
+  The T2 Tile Project is embracing living system principles as the "system" that will/can
+  survive/arise in this environment. living systems have already demonstrated
+  the ability to thrive in the physics of the world in which they operate,
+  a world with noise.
+
+  [and in the spirit of the Sex Pistols]
+  There is no need for a central control when the goal is anarchy.
+  
+
+

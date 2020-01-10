@@ -1,0 +1,11 @@
+= element WormLarva
+\color #050
+
+== Rules: Germination
+change w isa WormSegment
+change h isa WormHead
+
+
+  __@__    ->     wwwwh  
+
+

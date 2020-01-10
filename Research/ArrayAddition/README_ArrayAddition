@@ -1,0 +1,27 @@
+
+
+
+Unless the size limit of Quarks is increased I do not believe I can do this. I added a couple of Link objects to the Worm research directory. I was going to use these objects for an example of developing the ArrarySegments to pass messages to help complete the number array with some degree (probability) of sucess. The Quark limit of 32 bits is stopping me from doing this. I need the ArraySegments to
+1. be/inherit from a Quark
+2. have an Index and a Value. (- cannot have two Unsigned member vars in a Quark)
+
+----------------
+creating a archive of the ArrayAddition solution.
+This usses several different objects together, so I am encapsulating the solution in this archive and commiting it.
+
+This solution:
+Has an array that is typles of (index,value)
+Uses Numbers that have a tuple of (index, value)
+When Numbers contact the array if they are the correct number for that "index" they will write themselves in.
+
+This array COULD:
+know when it is done.
+Somtimes Repiar itself. (Damage would be known, repiar would be known)
+Perform any algorthim that acts on an array of numbers.
+
+
+
+Array Segment Comunication:
+I have made a number object that will walk the array once it encounters it (ANumberWalks.splat).
+
+This definitlly speeds things up, particulary getting the last couple of arraysegments set. But, I still want to do this in "code" not by having the Number object "spatially" walk the array.

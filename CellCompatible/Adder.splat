@@ -1,0 +1,45 @@
+= element Adder isa QContent
+\symbol Ad
+\color #0f8
+\symmetries all
+== Data members
+u Unsigned aNum = 0;
+
+== Rules
+given i isa InnerMembrane
+
+ @i -> @i
+
+given o isa OuterMembrane
+
+  @o -> @o
+
+ _@o -> @_o
+
+given n isa Number{
+. DebugUtils db;
+. db.print("*****found a number");
+. Adder & addMe = (Adder&) ew[0];
+. Adder add;
+. add.aNum = addMe.aNum + $self.aNum;
+. ew[$cursn] = add;
+.}
+
+   @_ -> _@
+
+   @n -> @_
+
+
+given a isa Adder{
+. DebugUtils db;
+. db.print("************************why me why me why me");
+. Adder & add = (Adder & )ew[0];
+. Adder newAdd;
+. newAdd.aNum = add.aNum + $self.aNum;
+. ew[$cursn] = newAdd;
+. ew[$winsn] = Empty.instanceof;
+.}
+
+   @a -> a@
+
+   @ -> @

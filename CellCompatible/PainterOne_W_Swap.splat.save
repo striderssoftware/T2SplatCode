@@ -1,0 +1,37 @@
+
+This is the old PainterOne object, in the new one the swap has been removed
+and ew[0] has been replaced with ew[$cursn]
+Those changes made it Cell Compatible
+
+= element PainterOne isa QContent
+\symbol P1
+\color #576
+\symmetries all
+
+== Rules
+given i isa InnerMembrane
+
+ @i -> @i
+
+given o isa OuterMembrane
+
+ @o -> @o
+
+ _@o -> @_o
+
+given e isa Empty {
+. DebugUtils db;
+. db.print("*****given @ isa PainterOne was called");
+. Paint p;
+. ew.swap(0u,ew.getSiteNumber(ew.mapSym(ew.getCoordRaw($cursn))));
+. ew[0] = p;
+. return false;
+.}
+
+given p isa Paint
+
+   @e -> e@
+
+   @p -> p@
+
+   @ -> @

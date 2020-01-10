@@ -1,0 +1,4 @@
+
+These are copies of the Cell objects, i.e.- All the objects that make up a cell excluding content.
+
+I want these so if/when Cell object changes in the actual T2 Tile code break the objects in the CellCompatible directory (my own objects)  I will be able to still build and run those objects and it will make it easier to see the changes and adjust.

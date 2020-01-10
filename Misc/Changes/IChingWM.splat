@@ -1,0 +1,19 @@
+= element IChingWM
+\symbol WM
+\color #fff
+\symmetries all
+
+== Rules
+given  c isa IChingWM
+change i isa InnerMembrane
+change o isa OuterMembrane
+
+  @c  -> oo  
+  c_     oi 
+
+  oi     oi
+  @_  -> oi 
+
+   @ -> @
+
+

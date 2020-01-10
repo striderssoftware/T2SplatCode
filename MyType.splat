@@ -1,0 +1,17 @@
+= element MyType
+\symbol M
+\color #e45
+\symmetries all
+
+== Rules
+given Z isa Wall
+
+   @_ -> _@
+
+   @Z_ -> @ZZ
+
+   @ZZ -> @ZZ
+
+   @ -> @
+
+

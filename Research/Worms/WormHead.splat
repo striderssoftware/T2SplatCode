@@ -1,0 +1,15 @@
+
+= element WormHead
+\symbol wh
+\color #0a4
+#\symmetries all
+
+== Data members
+
+== Rules
+given s isa WormSegment
+   
+
+   ssss@_ -> _ssss@
+
+   @ -> @

@@ -1,0 +1,43 @@
+= element LightedTreeRow
+\symbol LTR
+\color #ff4
+#\symmetries all
+
+== Data members
+u Unsigned colCount = 0u;
+u Unsigned uCount = 0u;
+
+== Rules: Germination
+
+given @ isa LightedTreeRow{
+. DebugUtils db;
+#. db.print("seed called ***********************");
+. if ( $self.uCount >= $self.colCount )
+.   return false;
+. if ( $self.uCount != 0u && $self.uCount + 1u != $self.colCount && $self.uCount % 2u == 0u )
+. {
+.  Light l;
+.  ew[1] = l;
+. }
+. else
+. {
+.  PaintGreen gn;
+.  ew[1] = gn;
+. }
+. $self.uCount = $self.uCount + 1u;
+. return true;
+.}
+
+
+given s isa PaintGreen
+
+  @_ -> _@
+  
+  @ -> @
+
+
+
+
+
+
+

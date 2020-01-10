@@ -1,0 +1,50 @@
+
+****************************************************
+GETCOORD2
+
+to use GetCord2
+use this setup
+@ = GetCord2
+W = Wall
+set up the below in the grid.
+
+ @WWW
+
+and then step
+you will get the coridinates of the"winning" Wall
+
+****************************************************
+VOTE
+
+Uses only spatial rules
+Uses Vote to pick one amongst many
+picks one Empty amongst 3 different Possible Empty's
+
+****************************************************
+VOTE2
+
+Notice that Vote2 does NOTHING in the change that could not have
+been done just using spatial rules (see  Vote3.splat)
+
+the Vote is only used to provide "logic" to determine if the
+Change rule should be applied, i.e. - IF the sun is out DO the change.
+
+****************************************************
+VOTE3
+
+a REALLY  simple example of using vote,
+
+Uses ONLY spatial rules in conjunction with a vote
+
+****************************************************
+
+
+
+
+
+
+
+
+
+
+

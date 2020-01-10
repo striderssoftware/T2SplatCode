@@ -1,0 +1,19 @@
+= element ManualMove
+\symbol MM
+\color #0d0
+\symmetries all
+
+== Data members
+
+
+== Rules
+check @ {
+. DebugUtils db;
+. db.print("check was called");
+. ManualMove & mm = (ManualMove &)ew[0];
+. ew[1] = mm;
+. return false;
+.}
+
+   @ -> @
+

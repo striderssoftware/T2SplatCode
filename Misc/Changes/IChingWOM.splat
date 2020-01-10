@@ -1,0 +1,29 @@
+= element IChingWOM
+\symbol WOM
+\color #fff
+\symmetries all
+
+== Data members
+u Unsigned count = 1u;
+
+== Rules
+
+given @ isa IChingWOM {
+. DebugUtils db;
+. db.print (" ******* hello from  IChing  *****");
+. if ( $self.count < 100u )
+. {
+.  IChingWOM ic;
+.  ic.count = $self.count + 1u;
+.  ew[$cursn] = ic;
+. }
+. 
+. if ( $self.count >= 100u )
+. {
+.   OuterMembrane im;
+.   ew[$cursn] = im;
+. }
+.}
+
+  @ -> @
+  

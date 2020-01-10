@@ -1,0 +1,18 @@
+= element Vote3
+\symbol V3
+\color #00f
+\symmetries all
+
+== Rules
+
+vote x {
+. return 1u;
+.}
+
+change t isa Wall
+
+  x@  -> t.
+   
+   @   -> @
+
+

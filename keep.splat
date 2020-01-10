@@ -1,0 +1,26 @@
+
+I made this while trying to get tunnel builder to work.
+This will move east and if it hits a wall turn it into a number and continue on
+
+= element TunnelBuilder
+\symbol TB
+\color #ff0
+
+
+== Rules
+given Z isa Wall{
+. DebugUtils db;
+. db.print("*****Z was a Wall");
+. Number num;
+. Wall wall;
+. TunnelBuilder	tb;
+. ew[$cursn] = tb;
+. ew[1] = num;
+.}
+
+   @_ -> _@
+
+   @Z -> @_
+
+   @ -> @
+

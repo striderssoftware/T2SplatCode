@@ -1,0 +1,16 @@
+= element IDrawM
+\symbol DM
+\color #fff
+\symmetries all
+
+== Rules
+given  c isa IDrawM
+change i isa InnerMembrane
+change o isa OuterMembrane
+
+  oi     oi
+  @_  -> oi 
+
+   @ -> @
+
+

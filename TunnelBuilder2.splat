@@ -1,0 +1,14 @@
+= element TunnelBuilder2
+\symbol TB2
+\color #ff0
+
+
+== Rules
+change w isa Wall
+
+   _     w
+   @_ -> _@
+   _     w
+
+
+   @ -> @

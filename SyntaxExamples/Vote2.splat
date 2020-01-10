@@ -1,0 +1,23 @@
+= element Vote2
+\symbol V2
+\color #00f
+\symmetries all
+
+== Rules
+vote t isa Wall
+
+vote x {
+. return 1u;
+.}
+
+change t {
+. DebugUtils db;
+. db.print("*****************change");
+. ew.swap($t.$winsn, $x.$winsn);
+.}
+
+  x@tt  -> t...
+   
+   @   -> @
+
+

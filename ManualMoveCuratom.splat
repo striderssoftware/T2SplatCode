@@ -1,0 +1,17 @@
+= element ManualMoveCuratom
+\symbol MM
+\color #00f
+\symmetries all
+
+== Data members
+
+
+== Rules
+given @ isa ManualMoveCuratom{
+. DebugUtils db;
+. db.print("******************given ");
+. ew[1] = $curatom;
+. ew[0] = Empty.instanceof;
+.}
+
+   @  -> @

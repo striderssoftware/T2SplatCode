@@ -1,0 +1,26 @@
+= element Protein
+\symbol PR
+\color #f0f
+\symmetries all
+
+
+== Rules
+
+given i isa InnerMembrane
+given o isa OuterMembrane
+given q isa QContent
+
+   @_ -> _@
+
+   @io_ -> _io@
+
+   @oi_ -> _oi@
+
+   @i -> @i
+
+   @o -> @o
+
+   @q -> q@
+
+   @ -> @
+   

@@ -1,0 +1,14 @@
+= quark QChild
+
+== Data members
+u Unsigned aNumber = 0u;
+
+
+== Methods
+u Void callYou(){
+. self.aNumber = self.aNumber + 10u;
+. DebugUtils db;
+. db.print("********call you was called");
+#. db.print("***************here is quark var value: ");
+#. db.print(self.aNumber);
+.}

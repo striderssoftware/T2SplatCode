@@ -1,0 +1,29 @@
+= element Parent
+\symbol Pa
+\color #00b
+\symmetries all
+
+== Data members
+u QChild  mychild;
+u Bool bCreateNew = true;
+
+== Rules
+
+given @ isa Parent { 
+. DebugUtils db;
+#. db.print("***************Parent is doing somehing***");
+. if ( $self.bCreateNew )
+. {
+.  db.print("******** You should ONLY see this ONCE ***");
+.  $self.bCreateNew = false;
+.  Child child;
+.  ew[1] = child; 
+.  $self.mychild = child;
+. }
+.
+.$self.mychild.callYou();
+.}
+
+   @ -> @
+
+

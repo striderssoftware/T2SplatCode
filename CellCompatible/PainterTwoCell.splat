@@ -1,0 +1,21 @@
+= element PainterTwoCell
+\symbol P2C
+\color #0f0
+\symmetries all
+
+== Rules
+change i isa InnerMembrane
+change o isa OuterMembrane
+change s isa PainterTwo
+
+  .....    ooooo
+  .....    oiiio
+  ..@.. -> oisio
+  .....    oiiio
+  .....    ooooo
+
+
+  
+
+
+

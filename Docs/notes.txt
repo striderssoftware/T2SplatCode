@@ -1,0 +1,104 @@
+
+
+I got this error today:
+20200106113829-3608: 0AEPS [B4CEA108]MSG: Assigned type 0x0300 for Ue102659217SimpleContentSeed10-1110434608202001066183335
+../../../src/gui/include/ToolboxPanel.h:917: FAILED: OUT_OF_ROOM
+
+I think there is just too many objects in my strider (working) dir.
+
+________________________________________
+stuff
+________________________________________
+There is a ton of killer debugging stuff in the
+YouTube T2 update # 254
+
+
+
+
+________________________________________
+Notes for my T2 Tile building experience
+________________________________________
+
+
+On ubuntu 19.04-64 bit system:
+
+Downloaded the tar files for MFM, ULAM and SPLAT.
+
+__________________________
+Attempting a build of MFM, ULAM, SPLAT
+
+-----
+some warnnings/errors:
+Getting error about un-necessary parentheses.
+
+i.e. - In VD.h - *(m_typeNames[TYPE_COUNT]);
+
+I fixed 6 or 8 of these and then stoped, I am hoping to find
+a compiler flag to stop these failures/errors
+
+Remove the warnnings and error flags from makefiles to get past the parentheses() errors I was seeing. i.e -wall -werror
+
+Here are the Makefile changes:
+
+
+qt17:T2_TileProject dlucero$
+qt17:T2_TileProject dlucero$
+qt17:T2_TileProject dlucero$ svn diff -c 130636
+Index: MFM/MFM-develop/config/Makevars.mk
+===================================================================
+--- MFM/MFM-develop/config/Makevars.mk  (revision 130635)
++++ MFM/MFM-develop/config/Makevars.mk  (revision 130636)
+@@ -60,10 +60,10 @@
+
+  # Common flags: All about errors -- let's help them help us
+  # Also: We need pthread!
+-COMMON_CFLAGS+=-Wall -pedantic -Werror -Wundef -D SHARED_DIR=\"$(SHARED_DIR)\" -pthread
++COMMON_CFLAGS+= -pedantic -Wundef -D SHARED_DIR=\"$(SHARED_DIR)\" -pthread
+  COMMON_FLAGS+= -Wextra -Wno-unused-parameter -Wno-ignored-qualifiers
+-# not reliable enough: COMMON_CPPFLAGS+=-Wmissing-noreturn -ansi -pedantic -Wall -Werror -D SHARED_DIR=\"$(SHARED_DIR)\" -pthread
+-COMMON_CPPFLAGS+=-ansi -pedantic -Wall -Werror -D SHARED_DIR=\"$(SHARED_DIR)\" -pthread
++# not reliable enough: COMMON_CPPFLAGS+=-Wmissing-noreturn -ansi -pedantic -D SHARED_DIR=\"$(SHARED_DIR)\" -pthread
++COMMON_CPPFLAGS+=-ansi -pedantic -D SHARED_DIR=\"$(SHARED_DIR)\" -pthread
+  COMMON_LDFLAGS+=-Wl,--fatal-warnings -pthread
+
+
+------------------------------------------------------------------------
+-----
+some new packages:
+It is well known these packages are needed as they are referenced in the quickStartScript that is on the git page:
+I had to install:
+
+libsdl-image1.2-dev
+libsdl-ttf2.0-dev
+libcrypt-openssl-rsa-perl 
+libcapture-tiny-perl
+
+
+These are from the qucikStartScript:
+libsdl1.2-dev 
+libsdl-image1.2-dev 
+libsdl-ttf2.0-dev 
+libcrypt-openssl-bignum-perl 
+libcrypt-openssl-rsa-perl 
+libcapture-tiny-perl
+
+
+Any additional packages not referenced by the quickStartScript :
+
+Two different packages were installed for this. 
+The package: File::ShareDir::Install was needed.
+
+
+-----
+
+I am now getting a sucessfull build of MFM, ULAM, SPLAT and I can run the FireBomb demo/simulator
+(run ULAM/demos/FB)
+------
+
+Noticed this line in make output:
+tmp/20190911140619/log/log.txt
+
+might be helpfull.
+
+
+

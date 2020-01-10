@@ -1,0 +1,18 @@
+#####
+= element Vote
+\symbol V
+\color #008
+#\symmetries all
+
+
+
+== Rules
+vote e isa Empty
+             
+      
+      eee@_ -> ...@@
+             
+       
+      @ -> .
+
+

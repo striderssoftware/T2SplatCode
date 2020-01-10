@@ -1,0 +1,487 @@
+---------------------------
+INHERITANCE:
+you can only inherit from a Quark
+---------------------------
+GET COORD
+A function on the EventWindow
+
+these calls will return the site index or the site indices.
+The symmetry is what rotation the @ or EventWindow is in.
+
+Everything is relative to the EventWindow = (0,0) = site index 0 = ew[0]
+
+The EventWindow is always centered on @ or (0,0) regardless of symmetry.
+
+see: Objects GetCoord and GetCoord2
+
+---a rule set --
+
+given e isa Empty {
+. DebugUtils db;
+. db.print("**************** testing getCoord");
+. db.print("**************** getCoord ");
+. db.print(ew.getCoord($cursn));
+. db.print("**************** getCoordRaw");
+. db.print(ew.getCoordRaw($cursn));
+. db.print("**************** mapsym(getcoord");
+. db.print(ew.mapSym(ew.getCoord($cursn)));
+. db.print("**************** getSiteNumber(getCoord");
+. db.print(ew.getSiteNumber(ew.mapsym(ew.getCoord($cursn))));
+.}
+
+   @e -> e@
+---------------------------------
+SELF - ULAM VRS SPLAT
+
+there is a SPLAT notion of self: $self
+and an ULAM notion of self: self
+
+
+even within a SPLAT file in a method use the ULAM notion of self.
+
+Error: "self Isn't bound"
+It means "there is no self there".
+---------------------------------
+LET:
+the use of let. This will traverse a line of NUmbers
+OR Walls and delete them, - leaves the last one which
+is correct behavior given the rule.
+
+== Rules:
+given @ isa Play
+given n	isa Number
+given w	isa Wall
+
+let x = w|n
+
+  x.    .@
+  x@ -> __
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+Note: This does not work if do this:
+let x = w
+I do not know why. - thats a bitwise "or" above
+---------------------------------
+CHECK
+
+A function with a bool return value.
+if the value is false this will end the event
+value of true event progresses.
+
+so this has a 1 in 100 chance of moving.
+
+== Rules:
+check @ : random.oneIn(100)
+
+  @_ ->  _@
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+
+---
+Using check without the ':' return thingy.
+Same behavior as above
+
+check @ {
+. Bool bProcess = random.oneIn(100);
+. return bProcess;
+. }
+
+
+---------------------------------
+GIVEN
+
+A function with a bool return value.
+if the value is false this will end the event
+if the value is true the event progresses.
+
+
+returning 1u (true) from
+== Rules
+given N isa Number{
+. return 1u;
+.}
+
+Note: numbers cast to bool fine. I have seen this used
+in demo code 
+
+---------------------------------
+VOTE
+
+A function with a bool return value.
+if the value is false this will end the event
+if the value is true the event progresses.
+
+ALSO:
+I think of Vote as being an "if any"
+where given I think of as an "if"
+
+So the rule below with a "given" all three
+grid points to the left of the self atom
+need to be empty's
+
+but, with a vote if any of the three grid
+points to the left of the self atom are
+empty the rule will progress and a new self
+created.
+
+
+== Rules
+vote e isa Empty
+#given e isa Empty
+
+
+
+      eee@_ -> ...@@
+
+
+      @ -> .
+
+---------------------------------
+USE OF: given and $curatom
+
+I need to confirm this:
+
+for a rule such as this:
+given n : ($curatom is Play)
+
+ nnn      ...
+ n@n  ->  ._.   # Die off 
+ nnn      ...
+
+
+
+These two statments are equvilent:
+given n : ($curatom is Play)
+given n isa Play
+
+I believe the only reason for doing this
+given n : ($curatom is Play)
+
+is so you can NOT it, like this:
+given n : !($curatom is Play)
+
+and there is no way to NOT
+given n isa Play
+
+---------------------------------
+COMMENTS
+The comment charactor is different in the different sections:
+when defining spatial rules use # as comment
+everywhere else use //
+
+---------------------------------
+SITE NUMBER VARIABLES
+Yo! - Clarify this, its confusing.
+
+    $picksn: 
+    $winsn: Site number that won the vote for this key
+#   $cursn: Site number we're currently examining in this change
+#   $curatom: The contents of the current site
+
+---------------------------
+TYPED VARS (SPATIAL RULES)
+
+I was attempting to use a symbol from another type in the rules for MyType.
+
+I was attempting this:
+  @W_ -> @WW
+
+thinking that W would be a "Wall" type as W is the symbol for a Wall object.
+
+but the W is just a var that represents whatever it is that is "next" to my object.
+
+to accomplish what I wanted I now use this at the top of the rules:
+"given Z isa Wall"  (no quotes)
+and then these rules.
+
+  @Z_ -> @ZZ
+
+  @ZZ -> @ZZ
+
+
+this gets me what I want
+
+---------------------------------
+SELF:
+
+check @ {
+  MyGuy & g = (MyGuy&) ew[0];
+ g.watchdog.count();
+ return false;
+ }
+
+Oh. 'Isn't bound,' means self isn't ew[0]?
+I think it means "there is no self there".
+
+
+there is a SPLAT notion of self: $self
+and an ULAM notion of self: self
+
+---------------------------------
+USE OF ~ (balancing spatial rules):
+
+If there is an error about unbalanced left and right sides
+for rules.
+
+From the Gitter T2 Tile (SPLAT) discussion.
+You can use ~ for balancing places you dont care about.
+
+ .
+.@~
+ ~
+
+---------------------------------
+USE OF . (SPATIAL RULES)
+
+ @ -> @
+
+Produces the same result as
+
+ @ -> .
+
+because . is anything. - I see the syntax both ways in example code.
+
+---------------------------------
+ONLY ONE @ IN SPATIAL RULES:
+THE USE OF @ AND TYPED SPATIAL VARS:
+
+You can NOT have more then one @ on either side of a rule.
+
+Typed vars let you "look" for others of your type.
+
+You can have a symbol that represents your type
+seperate from the @ and a given @ isa me
+
+example:
+if the type is me
+
+given @ isa me
+given s isa me
+
+below was taken from QMembrane:
+== Rules: OM management (mostly growing)
+given @ isa OuterMembrane
+given i isa InnerMembrane
+given o isa OuterMembrane
+given q isa QMembrane
+given n : !($curatom is InnerMembrane)
+
+and then this type of rule:
+so notice that both the @ and the 'o' are OuterMembrane's
+ ee_oqff     ..@....
+ eeo@iff ->  ...i...     # Run out
+ eeoiiff     .......
+
+---------------------------------
+LET:
+the use of let. This will traverse a line of NUmbers
+OR Walls and delete them, - leaves the last one which
+is correct behavior given the rule.
+
+== Rules:
+given @ isa Play
+given n        isa Number
+given w        isa Wall
+
+let x = w|n
+
+  x.    .@
+  x@ -> __
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+Note: This does not work if do this:
+let x = w
+I do not know why.
+---------------------------------
+CHECK
+A function with a bool return value.
+if the value is false this will end the event
+value of true event progresses.
+so this has a 1 in 100 chance of moving.
+
+== Rules:
+check @ : random.oneIn(100)
+
+  @_ ->  _@
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+
+---
+Using check without the ':' return thingy.
+Same behavior as above
+
+check @ {
+. Bool bRetunrValue = random.oneIn(100);
+. return bReturnValue;
+. }
+
+---------------------------------
+GIVEN
+
+A function with a bool return value.
+if the value is false this will end the event
+if the value is true the event progresses.
+
+
+returning 1u (true) from
+== Rules
+given N isa Number{
+. return 1u;
+.}
+
+Note: numbers cast to bool fine. I have seen this used
+in demo code 
+---------------------------------
+VOTE
+
+A function with a bool return value.
+if the value is false this will end the event
+if the value is true the event progresses.
+
+ALSO:
+I think of Vote as being an "if any"
+where given I think of as an "if"
+
+So the rule below with a "given" all three
+grid points to the left of the self atom
+need to be empty's
+
+but, with a vote if any of the three grid
+points to the left of the self atom are
+empty the rule will progress and a new self
+created.
+
+
+== Rules
+vote e isa Empty
+#given e isa Empty
+
+
+
+      eee@_ -> ...@@
+
+
+      @ -> .
+
+---------------------------------
+SWAP
+
+a function on the EventWindow.
+
+swap(<EWIndex>, <EWIndex>):
+i.e. -  ew.swap(9u, 0u);
+
+It appears one of the Index's must
+be "the current atom". i.e. - @ or ew[0]
+
+so this:
+ew.swap(1u, 0u);
+is equvilant to this:
+  x@  -> @x
+
+Note: where the x is NOT defined to be any particular object
+Note: (do NOT use dot) when using spatial rules
+ .@ -> @.   will swap BUT DELETE the other object (.)
+
+
+Note: the swap function will delete the other object.
+
+so this:
+ew.swap(1u, 0u);
+is NOT equvilant to this:
+  x@  -> @x   
+
+but IS equuvilant to this:
+  .@  -> @.   
+
+---------------------------------
+THE USE OF GIVEN AND $CURATOM
+
+I need to confirm this:
+
+for a rule such as this:
+given n : ($curatom is Play)
+
+ nnn      ...
+ n@n  ->  ._.   # Die off 
+ nnn      ...
+
+
+These two statments are equvilent:
+given n : ($curatom is Play)
+given n isa Play
+
+I believe the only reason for doing this
+given n : ($curatom is Play)
+
+is so you can NOT it, like this:
+given n : !($curatom is Play)
+
+and there is no way to NOT
+given n isa Play
+
+---------------------------------
+
+KEYCODES:
+keycodes are these type of "rules"
+
+given @ isa OuterMembrane
+given i isa InnerMembrane
+given o isa OuterMembrane
+given q isa QMembrane
+given n : !($curatom is InnerMembrane)
+
+---------------------------------
+SPATIAL PATTERN RULES:
+
+these things
+
+ @_ ->  _@
+
+these rules match states
+
+a state such as: @_
+
+(I would say these define state transitions)
+
+---------------------------------
+SPLAT OBJECT SIZE:
+An ULAM error about object size.
+
+ERROR: Trying to exceed allotted bit size (71) for element RAdder with 448 bits.
+
+---------------------------------
+THE DR&R EXECUTION ENVIRONMENT:
+
+Res (R) a generalized resource
+DReg (DR) a Dynamic Regulator
+
+• Don’t create or destroy DR; only DR itself does that.
+• Don’t grow unless we can consume R to do so. And,
+• DR creates R ‘de novo’, but we can create R only if we destroy something previously made from R.
+
+If our computation can persist and make progress while co-existing with DReg,
+we will have a limited but legitimate basis for calling it ‘robust’.
+
+---------------------------------
+GET SITE NUMBER:
+A new function available in the "new" ULAM
+ew.getSiteNumber(UrSelf&)
+
+This will take an object and return the site number (index) if that
+object is in the EventWindow.
+
+---------------------------------
+

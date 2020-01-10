@@ -1,0 +1,20 @@
+= element IChangeWM
+\symbol WM
+\color #f0f
+\symmetries all
+
+== Data members
+u Unsigned count = 1u;
+
+
+== Rules
+given @ isa IChangeWM {
+. DebugUtils db;
+. db.print (" ******* hello from I ching*****");
+. IChangeWM ic;
+. ic.count = $self.count + 1u;
+. ew[$cursn] = ic;
+.}
+
+  @ -> @
+  

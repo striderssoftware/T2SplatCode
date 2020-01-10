@@ -1,0 +1,12 @@
+
+
+----------
+As of commit# 133253
+The link objects now have a "pointer" to another that it created. And then call a method on that pointer. Note the pointer is to the base class QLink.
+
+
+Added two new object QLink and Link. These are for experimenting with an attempt to get one object to have a "pointer" to another that it created. And then call a method on that pointer.
+----------
+These worms are completly non-functioning. I might be able to leverge GetCoord to help with Worm development. 
+But, I want to use the Bonds that were introduced in a T2 Tile Video but that I do not believe are up on Git yet.
+
