@@ -1,0 +1,63 @@
+= element Wave
+\symbol WV
+\color #00f
+#\symmetries all
+
+
+== Rules
+given x isa Wave
+given y : !($curatom is Wave)
+
+  x        x
+  .@  ->   .@    # wait up
+  x        x
+
+  x        x
+  y@  ->   y@    # post bumb wait up
+  x        x
+
+  x        x
+ @_   ->  _@    # catch up
+  x        x
+
+  x        x
+ @y   ->  y@    # catch up through
+  x        x
+
+  x     x
+  @_ -> _@      # move
+  x     x
+
+  x     x
+  @y -> y@      # move through
+  x     x
+
+  x_   ->  x_   # wait up end
+  .@       .@ 
+
+  _@       .@
+  x.   ->  x.   # wait up  end
+  
+  x.   ->  x.   # post bumb wait up end
+  y@       y@ 
+
+  y@       y@
+  x.   ->  x.   # post bumb wait up  end
+
+  @_   ->  _@   # catch up end
+  .x       .x 
+
+  .x       .x
+  @_   ->  _@   # catch up  end
+
+  @y   ->  y@   # catch up end through
+  .x       .x
+  
+  .x       .x
+  @y   ->  y@   # catch up  end through
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+
