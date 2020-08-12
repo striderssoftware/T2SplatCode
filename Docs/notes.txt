@@ -87,6 +87,8 @@ Any additional packages not referenced by the quickStartScript :
 
 Two different packages were installed for this. 
 The package: File::ShareDir::Install was needed.
+sudo apt-get update
+sudo apt-get install libfile-sharedir-install-perl
 
 
 -----
