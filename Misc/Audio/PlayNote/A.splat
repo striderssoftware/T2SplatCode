@@ -1,0 +1,17 @@
+= element A
+\symbol A
+\color #0f0
+\audio #001
+\symmetries all
+
+== Data members
+
+== Rules
+# the audio frequency has been "rendered" DIE
+given @ isa A{
+.  return false;
+.}
+
+   @ -> @
+
+

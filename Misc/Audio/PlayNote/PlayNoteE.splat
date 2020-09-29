@@ -1,0 +1,19 @@
+= element PlayNoteE
+\symbol PE
+\color #ff0
+\audio #000
+#\symmetries all
+
+== Rules
+change n isa E
+given Z isa Wall{
+. DebugUtils db;
+. db.print("*****Z was a Wall");
+.}
+
+   @_ -> _@
+
+   @Z -> nZ
+
+   @ -> @
+
