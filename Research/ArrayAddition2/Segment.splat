@@ -1,0 +1,55 @@
+= element Segment isa QSegment
+\symbol S
+\color #00f
+#\symmetries all
+
+== Data members
+u Unsigned(4) passIndex = 0;
+u Unsigned(4) passValue = 0;
+
+== Rules:
+given @ isa Segment{
+. DebugUtils db;
+. db.print("given @ isa******** link");
+. if ( $self.passValue != 0 )
+. {
+.
+.   if ( $self.passIndex == $self.index )
+.   {
+.     $self.value = $self.passValue;
+.   }
+.
+.   if ( $self.index < 14 )
+.   {
+.     db.print("Passing Right");
+.     Segment & right = (Segment & ) ew[4];
+.     right.passIndex = $self.passIndex;
+.     right.passValue = $self.passValue;
+.   }
+.   if ( $self.index > 0 )
+.   {
+.     db.print("Passing Left");
+.     Segment & left = (Segment & ) ew[1];
+.     left.passIndex = $self.passIndex;
+.     left.passValue = $self.passValue;
+.   }
+.
+. $self.passValue = 0;
+. }
+.
+.
+.}
+
+  @ -> @
+
+== Methods
+getColor {
+. DebugUtils db;
+#. db.print("********** getColor was called ****************");
+. ARGB ret;
+. if ( value > 0u )
+.   ret = cu.color(0xf0,0x00,0x00);
+. else
+.   ret = cu.color(0x00,0x70,0x10);
+. return ret;
+.}

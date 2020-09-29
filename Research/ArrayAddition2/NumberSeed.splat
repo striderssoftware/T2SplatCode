@@ -1,0 +1,30 @@
+= element NumberSeed
+\symbol NS
+\color #0ff
+\symmetries all
+
+
+== Data members
+#u unsigned paramater uCount = 0;
+u Unsigned(4) uCurrentIndex = 0u;
+
+== Rules: Germination
+given @ isa NumberSeed{
+. DebugUtils db;
+. db.print("seed called ***********************");
+. ANumber aNumber;
+. aNumber.index = (Unsigned(4)) $self.uCurrentIndex;
+. aNumber.aNum =  (Unsigned(4)) aNumber.index;
+. ew[1] = aNumber;
+. $self.uCurrentIndex += (Unsigned(4)) 1u;
+. if ( $self.uCurrentIndex >= (Unsigned(4)) 14u )
+. {
+.   $self.uCurrentIndex = (Unsigned(4)) (0u);
+.   return true;
+. }
+. return true;
+.}
+
+    @  -> @  
+
+
