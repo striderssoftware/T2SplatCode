@@ -1,0 +1,43 @@
+= element Segment isa QSegment
+\symbol S
+\color #00f
+#\symmetries all
+
+== Data members
+u Unsigned total = 0;
+
+
+== Rules:
+given @ isa Segment{
+. DebugUtils db;
+#. db.print("given @ isa******** link");
+. if ( $self.index == 14u && $self.value != 0u )
+. {
+.  db.print("Passing Total Left");
+.  Segment & left = (Segment & ) ew[1];
+.  left.total = $self.value;
+. }
+. else if ( $self.total != 0u && $self.value != 0u )
+. {
+.  Segment & left = (Segment & ) ew[1];
+.  left.total = $self.value + $self.total;
+. }
+.
+.}
+
+  @ -> @
+
+== Methods
+getColor {
+. DebugUtils db;
+#. db.print("********** getColor was called ****************");
+. ARGB ret;
+. if ( value > 0u )
+.   ret = cu.color(0xf0,0x00,0x00);
+. else if ( index == 0u && total != 0u )
+.   ret = cu.color(0x20,0xf0,0x00);
+. else
+.   ret = cu.color(0x00,0x70,0x10);
+. return ret;
+.}
+

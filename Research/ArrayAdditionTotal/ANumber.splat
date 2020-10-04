@@ -1,0 +1,43 @@
+= element ANumber
+\symbol AN
+\color #0f3
+#\symmetries all
+
+== Data members
+u Unsigned(4) aNum = 0u;
+u Unsigned(4) index = 0u;
+
+== Rules
+given @ isa ANumber
+given a isa Segment{
+. DebugUtils db;
+#. db.print("*************************** found  array *** who ");
+. ANumber & anumber = (ANumber &) ew[0];
+. if ( $self.index == anumber.index )
+. {
+.   $self.value = anumber.aNum;
+. }
+.}
+
+  @ -> _
+  _    _
+  _    _
+  _    @
+
+
+  @ -> _
+  _    _
+  _    @
+  
+
+  @ -> _
+  _    @
+
+  
+  @_ -> _@   # walk the array
+  aa    ..
+
+  @_ -> __   # die your done
+  a_    ..
+
+  @ -> @
