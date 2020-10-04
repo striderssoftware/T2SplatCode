@@ -21,6 +21,7 @@ given @ isa Segment{
 . {
 .  Segment & left = (Segment & ) ew[1];
 .  left.total = $self.value + $self.total;
+.  return false;
 . }
 .
 .}
