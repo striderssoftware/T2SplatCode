@@ -3,7 +3,7 @@ A fairly contrived  setup, I agree :)
 
 1. Create an array using the ArraySeed.
 2. Run the simulator to get an array.
-3. place a number seed three grid places above the far array object.
+3. place a number seed three grid places above the far left array object.
 
 Eample:
 
