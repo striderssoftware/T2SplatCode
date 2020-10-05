@@ -1,0 +1,23 @@
+The setup to use this example
+A fairly contrived  setup, I agree :) 
+
+1. Create an array using the ArraySeed.
+2. Run the simulator to get an array.
+3. place a number seed three grid places above the far array object.
+
+Eample:
+
+a = array
+s = number seed
+
+  s
+
+
+  aaaaaaaaaaaaaaaaaaaaaaaaa
+
+Result:
+The numbers will move down to the array
+The numbers will walk the array placing their Values in the array if the correct index.
+A total should be passed back left to the head, - array will shrink back to head.
+the Head should have the total of all the numbers in its total field.
+
