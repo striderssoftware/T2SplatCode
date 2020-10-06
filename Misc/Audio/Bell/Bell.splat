@@ -1,0 +1,17 @@
+= element Bell
+\symbol B
+\color #00f
+#\symmetries all
+
+== Rules
+vote x : !($curatom is Empty)
+change n isa A
+change e isa Empty
+
+
+  x@ -> en
+
+
+  @ -> @
+
+

@@ -1,0 +1,13 @@
+= element Mallet
+\symbol M
+\color #f00
+#\audio #000
+#\symmetries all
+
+== Data members
+
+== Rules
+
+   @_ -> _@
+
+   @ -> @

@@ -1,0 +1,18 @@
+= element A
+\symbol A
+\color #00f
+\audio #293
+#\symmetries all
+
+== Data members
+
+== Rules
+vote x isa Empty
+change y isa AA
+
+
+  x@ -> xy
+
+
+   @ -> @
+
