@@ -1,0 +1,17 @@
+= element GG
+\symbol GG
+\color #0f0
+\audio #33e
+#\symmetries all
+
+== Data members
+
+== Rules
+# the audio frequency has been "rendered" DIE
+given @ isa GG{
+.  return false;
+.}
+
+   @ -> @
+
+

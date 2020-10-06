@@ -1,0 +1,16 @@
+= element FKey
+\symbol KF
+\color #00f
+#\symmetries all
+
+
+== Rules
+vote x : !($curatom is Empty)
+change n isa F
+change e isa Empty
+
+  x@. -> e@n
+
+  @ -> @
+
+

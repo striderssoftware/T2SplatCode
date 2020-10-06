@@ -1,0 +1,16 @@
+= element BKey
+\symbol KB
+\color #00f
+#\symmetries all
+
+
+== Rules
+vote x : !($curatom is Empty)
+change n isa B
+change e isa Empty
+
+  x@. -> e@n
+
+  @ -> @
+
+

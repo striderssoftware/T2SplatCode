@@ -1,0 +1,16 @@
+= element DKey
+\symbol KD
+\color #00f
+#\symmetries all
+
+
+== Rules
+vote x : !($curatom is Empty)
+change n isa D
+change e isa Empty
+
+  x@. -> e@n
+
+  @ -> @
+
+
