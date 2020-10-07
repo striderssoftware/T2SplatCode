@@ -1,0 +1,12 @@
+Thoughts about a Piano Seed.
+I do Not want to have to provide all Notes I would like them crated on the fly.
+
+To get the correct frequencies
+There is math that will do it captured in ScaleFrequencies.cpp.
+
+Hard code the Seed with one octave of Frequencies and then it is just a Doubling of each Frequency to get the next octave.
+
+I provided one that will make one octave.
+
+The Seed will need to create a generic key and then set the frequency.
+The key would then create a generic note and set the frequency.

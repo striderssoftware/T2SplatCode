@@ -1,0 +1,63 @@
+= element PianoSeed
+\symbol PS
+\color #00f
+#\symmetries all
+
+== Data Members
+u Unsigned(4) count = 0;
+
+== Rules
+given @ isa PianoSeed{
+. DebugUtils db;
+. db.print("*****given @ isa PianoSeed");
+. if ( $self.count == 0u )
+. {
+.  AKey akey;
+.  ew[2] = akey;
+. }
+. if ( $self.count == 1u )
+. {
+.  BKey akey;
+.  ew[2] = akey;
+. }
+. if ( $self.count == 2u )
+. {
+.  CKey akey;
+.  ew[2] = akey;
+. }
+. if ( $self.count == 3u )
+. {
+.  DKey akey;
+.  ew[2] = akey;
+. }
+. if ( $self.count == 4u )
+. {
+.  EKey akey;
+.  ew[2] = akey;
+. }
+. if ( $self.count == 5u )
+. {
+.  FKey akey;
+.  ew[2] = akey;
+. }
+. if ( $self.count == 6u )
+. {
+.  GGKey akey;
+.  ew[2] = akey;
+. }
+. if ( $self.count == 7u )
+. {
+.  A2Key akey;
+.  ew[2] = akey;
+. }
+.
+. $self.count += 1u;
+.
+. if ( $self.count >= 8u )
+.   return false;
+.}
+
+  @ -> _
+  _    @
+
+

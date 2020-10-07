@@ -1,0 +1,16 @@
+= element A2Key
+\symbol KA
+\color #00f
+#\symmetries all
+
+
+== Rules
+vote x : !($curatom is Empty)
+change n isa A2
+change e isa Empty
+
+  x@. -> e@n
+
+  @ -> @
+
+
