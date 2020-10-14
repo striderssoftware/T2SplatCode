@@ -13,7 +13,7 @@ Usage:
 3. place the number seed above and to the left of the first grid spot.
 4. place a Wall object one grid space away from far left of array. 
 
-Example: (for each array)
+Example:
 
 a = array
 s = number seed
