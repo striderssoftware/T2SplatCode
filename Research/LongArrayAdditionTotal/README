@@ -9,9 +9,8 @@ The setup to use this example:
 
 Usage:
 1. Create an array using the ArraySeed.
-2. Run the simulator to get the array.
-3. place the number seed above and to the left of the first grid spot.
-4. place a Wall object one grid space away from far left of array. 
+2. Run the simulator to get the array, and the stopper (the Wall object).
+3. place the number seed above and to the left of the first array spot.
 
 Example:
 

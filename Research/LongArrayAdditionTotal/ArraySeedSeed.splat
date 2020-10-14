@@ -8,10 +8,18 @@ u Unsigned(4) segmentSize = 15u;
 u Unsigned(3) segmentCount = 0;
 u Unsigned count = 0u;
 
+
 == Rules: Germination
 given @ isa ArraySeedSeed{
 . DebugUtils db;
 #. db.print("seedseed called ***********************");
+.
+.
+. if ( $self.count == 0u )
+. {
+.  Wall aWall;
+.  ew[29] = aWall;
+. }
 .
 . if ( $self.count % ($self.segmentSize + 1u) == 0u )
 . {
