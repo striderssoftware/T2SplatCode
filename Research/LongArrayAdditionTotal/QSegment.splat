@@ -1,0 +1,8 @@
+= quark QSegment
+
+== Data members
+u Unsigned(4) offset = 0;
+u Unsigned(4) index = 0;
+u Unsigned(4) value = 0;
+
+== Methods

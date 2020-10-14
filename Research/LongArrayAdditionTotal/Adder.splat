@@ -1,0 +1,28 @@
+= element Adder
+\symbol A
+\color #970
+#\symmetries all
+
+== Data members
+u Unsigned aNum = 0;
+
+== Rules
+
+given w isa Wall
+ w@ -> w@
+      
+given a isa Adder{
+. DebugUtils db;
+. Adder & add = (Adder & )ew[0];
+. Adder newAdd;
+. newAdd.aNum = add.aNum + $self.aNum;
+. ew[$cursn] = newAdd;
+. ew[$winsn] = Empty.instanceof;
+.}
+
+   _@ -> @_
+
+   a@ -> @a
+
+   @ -> @
+   

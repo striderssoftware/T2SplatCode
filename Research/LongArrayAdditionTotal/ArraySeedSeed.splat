@@ -1,0 +1,36 @@
+= element ArraySeedSeed
+\symbol SS
+\color #f00
+#\symmetries all
+
+== Data members
+u Unsigned(4) segmentSize = 15u;
+u Unsigned(3) segmentCount = 0;
+u Unsigned count = 0u;
+
+== Rules: Germination
+given @ isa ArraySeedSeed{
+. DebugUtils db;
+#. db.print("seedseed called ***********************");
+.
+. if ( $self.count % $self.segmentSize == 0u )
+. {
+.  ArraySeed seed;
+.  Unsigned var =  1u;
+.  seed.offset = $self.segmentCount;
+.  ew[2] = seed;
+.  $self.segmentCount += 1u;
+. }
+.
+.  $self.count += 1u;
+.
+. if ( $self.segmentCount >  1u ){
+.   return false; }
+.
+.} 
+
+  @_ -> _@
+
+
+  @ -> @
+

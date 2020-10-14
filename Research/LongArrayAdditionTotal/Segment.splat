@@ -1,0 +1,72 @@
+= element Segment isa QSegment
+\symbol S
+\color #00f
+#\symmetries all
+
+== Data members
+u Unsigned total = 0;
+u Bool done = false;
+
+== Rules:
+given @ isa Segment{
+. DebugUtils db;
+#. db.print("given @ isa******** link");
+.
+# Far right end of array - if you have a value begin passing left
+. if ( ($self.index + 1 ) % 15u == 0 && $self.value != 0u ) 
+. {
+.  db.print("Passing Total Left");
+.  Segment & left = (Segment & ) ew[1];
+.  if ( !$self.done ){
+.   $self.done = true;
+.   $self.total = $self.value;
+.   }
+.  if ( $self.index != 0 && $self.index %5 != 0 )
+.    left.total = $self.value;
+. }
+# Other array segments passing totals left
+. else if ( $self.total != 0u && $self.value != 0u )
+. {
+#  Far left of array do NOT pass left
+.  if ( $self.index != 0 && $self.index % 15 != 0 )
+.  {
+.    Segment & left = (Segment & ) ew[1];
+.    left.total = $self.total + $self.value;
+.    return false;
+.   }
+.  else if ( !$self.done )
+.  {
+.    $self.done = true;
+.    $self.total += $self.value;
+.  }
+. }
+.
+.  if ( ($self.index == 0 || $self.index % 5u == 0u) && $self.total != 0u )
+.  {
+.    Adder ae;
+.    ae.aNum = $self.total;
+.    db.print("all done ready to become am addereater");
+.    ew[1] = ae;
+.    return false;
+.  }
+.
+.  return true;
+. }
+
+
+  @ -> @
+
+
+== Methods
+getColor {
+. DebugUtils db;
+#. db.print("********** getColor was called ****************");
+. ARGB ret;
+. if ( (self.index == 0 || index % 5u == 0u) && total != 0u )
+.   ret = cu.color(0x00,0x00,0xf0);
+. else if ( value > 0u )
+.   ret = cu.color(0xf0,0x00,0x00);
+. else
+.   ret = cu.color(0x00,0x70,0x10);
+. return ret;
+.}
