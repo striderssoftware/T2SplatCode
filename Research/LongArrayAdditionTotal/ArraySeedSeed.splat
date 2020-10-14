@@ -13,10 +13,9 @@ given @ isa ArraySeedSeed{
 . DebugUtils db;
 #. db.print("seedseed called ***********************");
 .
-. if ( $self.count % $self.segmentSize == 0u )
+. if ( $self.count % ($self.segmentSize + 1u) == 0u )
 . {
 .  ArraySeed seed;
-.  Unsigned var =  1u;
 .  seed.offset = $self.segmentCount;
 .  ew[2] = seed;
 .  $self.segmentCount += 1u;
