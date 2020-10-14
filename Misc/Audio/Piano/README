@@ -13,3 +13,7 @@ I provided one that will make one octave.
 
 The Seed will need to create a generic key and then set the frequency.
 The key would then create a generic note and set the frequency.
+
+I cannot find a way to set the freqency or the /audio attribute on a newlly created object
+I cannot find a way to set the /color attribute on a newlly created object
+I might have to override getAudio as is done with getColor
