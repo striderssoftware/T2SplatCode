@@ -19,7 +19,7 @@ given @ isa NumberSeed{
 . ANumber aNumber;
 . aNumber.index = $self.currentIndex;
 . aNumber.aNum  = $self.currentIndex;
-. ew[4] = aNumber;
+. ew[1] = aNumber;
 .
 . $self.currentIndex += 1u;
 .
@@ -30,7 +30,7 @@ given n isa ANumber{
 #. db.print("****given s isa segment*********");
 .}
 
-  _@n -> @_n
+  n@_ -> n_@
   
   @ -> @
 

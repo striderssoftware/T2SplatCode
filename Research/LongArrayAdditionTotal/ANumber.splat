@@ -12,20 +12,24 @@ given @ isa ANumber
 given a isa Segment{
 . DebugUtils db;
 #. db.print("*************************** found  array *** who ");
+.
 . ANumber & anumber = (ANumber &) ew[0];
 . if ( $self.index + ($self.offset * 15u ) ==  anumber.index )
 . {
 .   $self.value = 1u;
 . }
+.
 .}
 
   
-  @_ -> _@   # walk the array
+  _@ -> @_   # walk the array
   aa    ..
 
-#  @_ -> __   # die your done
-#  a_    ..
+given w isa Wall
 
-  @_ -> _@
+  _@  ->  __  # die your done
+  _w      ..
+
+  _@ -> @_
 
   @ -> @
