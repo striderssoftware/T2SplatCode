@@ -5,7 +5,7 @@
 
 == Data members
 u Unsigned currentIndex = 0;
-u Unsigned size = 30;
+u Unsigned size = 45;
 
 == Rules: Germination
 given @ isa NumberSeed{

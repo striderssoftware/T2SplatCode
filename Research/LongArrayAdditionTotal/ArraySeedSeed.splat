@@ -31,7 +31,7 @@ given @ isa ArraySeedSeed{
 .
 .  $self.count += 1u;
 .
-. if ( $self.segmentCount >  1u ){
+. if ( $self.segmentCount >  2u ){
 .   return false; }
 .
 .} 
