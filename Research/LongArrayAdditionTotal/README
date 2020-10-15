@@ -10,7 +10,7 @@ The setup to use this example:
 Usage:
 1. Create an array using the ArraySeed.
 2. Run the simulator to get the array, and the stopper (the Wall object).
-3. place the number seed above and to the left of the first array spot.
+3. place the number seed above and to the right of the first array spot.
 
 Example:
 
@@ -18,7 +18,7 @@ a = array
 s = number seed
 w = wall object
 
-  s
+                            s
  w aaaaaaaaaaaaaaaaaaaaaaaaa
 
 Result:
