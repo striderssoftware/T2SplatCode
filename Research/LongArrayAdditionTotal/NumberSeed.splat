@@ -8,30 +8,32 @@ u Unsigned currentIndex = 0;
 u Unsigned size = 45;
 
 == Rules: Germination
-given @ isa NumberSeed{
+given e isa Empty{
 . DebugUtils db;
-#. db.print("seed called ***********************");
-. if ( $self.currentIndex >= $self.size )
+. db.print("seed called ***********************");
+. NumberSeed & seed = (NumberSeed &) ew[0];
+. if ( seed.currentIndex >= seed.size )
 . {
+.   ew[0] = Empty.instanceof;
 .   return false;
 . }
 .
 . ANumber aNumber;
-. aNumber.index = $self.currentIndex;
-. aNumber.aNum  = $self.currentIndex;
+. aNumber.index = seed.currentIndex;
+. aNumber.aNum  = seed.currentIndex;
 . ew[1] = aNumber;
 .
-. $self.currentIndex += 1u;
+. seed.currentIndex += 1u;
 .
+. return false;
 .}
 
-given n isa ANumber{
-. DebugUtils db;
-#. db.print("****given s isa segment*********");
-.}
+given n isa ANumber
 
-  n@_ -> n_@
-  
+  e@ -> e@
+
+  n@ -> n@
+
   @ -> @
 
 == Methods
