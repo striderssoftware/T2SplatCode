@@ -1,0 +1,23 @@
+= element GrubTail
+\symbol GT
+\color #00FF00
+\symmetries all
+
+== Rules
+given s : true
+
+vote s isa GrubStretch
+
+change s {
+. if ($cursn == $winsn) {
+.   ew[$cursn] = ew[0];
+.   ew[0] = Empty.instanceof;
+. }
+.}
+
+   s      s
+  s@s -> s.s
+   s      s
+
+  @ -> @
+

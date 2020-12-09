@@ -1,0 +1,33 @@
+ element Grub
+\symbol Gr
+\color #F00
+\symmetries all
+
+== Rules
+
+change H isa GrubHead
+change T isa GrubTail
+
+  @_ -> HT
+
+= element GrubHead
+\symbol GH
+\color #00FF00
+\symmetries all
+
+== Rules
+given s : true
+
+vote s isa GrubStretch
+
+   s      .
+  s@s -> ...
+   s      .
+
+change S isa GrubStretch
+
+  @_ -> S@
+
+  @ -> @
+
+

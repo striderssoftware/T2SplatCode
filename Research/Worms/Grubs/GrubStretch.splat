@@ -1,0 +1,9 @@
+= element GrubStretch
+\symbol GS
+\color #00F
+\symmetries all
+
+== Rules
+
+  @ -> @
+
