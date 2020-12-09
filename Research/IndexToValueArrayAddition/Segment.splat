@@ -1,0 +1,16 @@
+= element Segment
+\symbol S
+\color #00f
+#\symmetries all
+
+== Data members
+#u Unsigned(4) offset = 0;
+u Unsigned index = 0;
+
+== Rules:
+
+  @ -> .
+
+
+
+== Methods

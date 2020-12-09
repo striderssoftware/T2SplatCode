@@ -1,0 +1,30 @@
+
+To get over the element size limit multiple arrays
+are created with offsets to get the correct indices. They
+"appear" as one long array spatially. But when computing
+the total they each compute their own total and then the
+total objects merge.
+
+The setup to use this example:
+
+Usage:
+1. Create an array using the ArraySeed.
+2. Run the simulator to get the array, add the stopper (the Wall object).
+3. place the number seed above and to the right of the first array spot.
+
+Example:
+
+a = array
+s = number seed
+w = wall object
+
+                            s
+ w aaaaaaaaaaaaaaaaaaaaaaaaa
+
+Result:
+The numbers will walk the array placing their Values in the array if the correct index.
+The array index objects change into array value objects, The far right array value will turn into an
+Adder object and add up all the array values.
+The adder object will have the grand total in it.
+
+

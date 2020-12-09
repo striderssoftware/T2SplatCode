@@ -1,0 +1,36 @@
+= element ArraySeed
+\symbol AS
+\color #f00
+#\symmetries all
+
+== Data members
+u Unsigned currentIndex = 0;
+
+== Rules: Germination
+given @ isa ArraySeed{
+. DebugUtils db;
+. db.print("seed called ***********************");
+.
+. if ( $self.currentIndex >= 50u   )
+. {
+.   return false;
+. }
+.
+. Segment newSegment;
+. newSegment.index = $self.currentIndex;
+. ew[1] = newSegment;
+.
+. $self.currentIndex += 1u;
+.
+.}
+
+given s isa Segment{
+. DebugUtils db;
+#. db.print("****given s isa segment*********");
+.}
+
+  s@_ -> s_@
+
+   @ -> @
+
+== Methods

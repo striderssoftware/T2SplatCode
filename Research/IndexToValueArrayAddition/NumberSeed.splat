@@ -1,0 +1,39 @@
+= element NumberSeed
+\symbol NS
+\color #0fa
+#\symmetries all
+
+== Data members
+u Unsigned currentIndex = 0;
+u Unsigned size = 50;
+
+== Rules: Germination
+given e isa Empty{
+. DebugUtils db;
+. db.print("seed called ***********************");
+. NumberSeed & seed = (NumberSeed &) ew[0];
+. if ( seed.currentIndex >= seed.size )
+. {
+.   ew[0] = Empty.instanceof;
+.   return false;
+. }
+.
+. ANumber aNumber;
+. aNumber.index = seed.currentIndex;
+. aNumber.aNum  = seed.currentIndex;
+. ew[1] = aNumber;
+.
+. seed.currentIndex += 1u;
+.
+. return false;
+.}
+
+given n isa ANumber
+
+  e@ -> e@
+
+  n@ -> n@
+
+  @ -> @
+
+== Methods

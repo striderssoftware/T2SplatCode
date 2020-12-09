@@ -1,0 +1,48 @@
+= element SegmentValue
+\symbol SV
+\color #00f
+#\symmetries all
+
+== Data members
+u Unsigned value = 0;
+
+== Rules:
+# middle segments
+given s isa SegmentValue{
+. DebugUtils db;
+#. db.print("given @ middle");
+.
+.  return true;
+. }
+
+
+  s@s -> ...
+
+# far right segment
+given e isa Empty
+change e isa Adder
+given a isa SegmentValue{
+. DebugUtils db;
+.
+.  return true;
+. }
+
+  a@e -> ..e
+
+# far left segment
+given b isa SegmentValue {
+. DebugUtils db;
+#. db.print("given @ left ");
+.  return true;
+. }
+
+
+  _@b -> ...
+
+
+
+  .@. -> ...
+
+
+
+== Methods
