@@ -5,7 +5,7 @@
 
 == Data members
 u Unsigned currentIndex = 0;
-u Unsigned size = 50;
+u Unsigned size = 100;
 
 == Rules: Germination
 given e isa Empty{

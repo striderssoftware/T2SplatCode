@@ -11,7 +11,7 @@ given @ isa ArraySeed{
 . DebugUtils db;
 . db.print("seed called ***********************");
 .
-. if ( $self.currentIndex >= 50u   )
+. if ( $self.currentIndex >= 100u   )
 . {
 .   return false;
 . }
