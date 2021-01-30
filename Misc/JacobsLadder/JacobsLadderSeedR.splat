@@ -1,0 +1,27 @@
+= element JacobsLadderSeedR
+\symbol LR
+\color #f00
+#\symmetries all
+
+== Data members
+u Unsigned uCount = 1u;
+
+== Rules: Germination
+
+given @ isa JacobsLadderSeedR {
+. $self.uCount = $self.uCount + 1u;
+. if ( $self.uCount > 25u )
+.    return false;
+. }
+
+change x isa JacobsLadder
+
+  _      @
+ @   -> x
+
+
+
+
+
+
+

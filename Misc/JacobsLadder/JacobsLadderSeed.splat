@@ -1,0 +1,19 @@
+= element JacobsLadderSeed
+\symbol JS
+\color #f00
+#\symmetries all
+
+== Rules
+change x isa JacobsLadderSeedL
+change y isa JacobsLadderSeedR
+change z isa JacobsLadder
+change a isa JLArc
+
+   ...      xay
+    @   ->   z
+
+
+
+
+
+
