@@ -1,0 +1,22 @@
+= element S. A  JacobsLadder
+\symbol S
+\color #f00
+#\symmetries all
+\author Dennis Lucero
+\license lgpl
+\copyright (C) 2021 The Living Computation Foundation
+
+== Rules
+change x isa JacobsLadderSeedL
+change y isa JacobsLadderSeedR
+change z isa JacobsLadder
+change a isa JLArc
+
+   ...      xay
+    @   ->   z
+
+
+
+
+
+

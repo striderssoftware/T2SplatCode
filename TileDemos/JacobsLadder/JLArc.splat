@@ -1,0 +1,50 @@
+= element JLArc
+\symbol JA
+\color #00f
+#\symmetries
+
+== Rules
+given x isa JLArc
+given y isa JacobsLadder
+change z isa JLArc
+
+  y_@ -> yz@    # grow
+
+  @_y -> @zy    # grow
+
+   _       @
+  y@y ->  y_y   # start up
+
+   @       @
+  x.x  -> x.x    # wait up
+
+
+  x_x     x@x
+   @   ->  _    # catch up 
+
+   _        @
+  x@x  ->  x_x   # move
+
+
+  _@   ->  _@   # wait up end
+  x.       x.
+
+  @.       @.
+  _x   ->  .x   # wait up end
+
+  _x       @x
+  @.   ->  _.   # catch up end
+
+
+  x_       x@
+  .@   ->  ._   # catch up  end
+
+  ____@  ->  _____  # Die
+
+  @____  ->  _____  # Die
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+

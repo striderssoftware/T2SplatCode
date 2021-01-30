@@ -1,0 +1,38 @@
+= element JacobsLadder
+\symbol JL
+\color #f00
+#\symmetries all
+
+== Data members
+u Unsigned timer = 110u;
+
+== Rules
+change x isa JLArc
+given y isa JacobsLadder
+
+
+given @ isa JacobsLadder {
+. $self.timer = $self.timer - 1u; 
+. if ( $self.timer < 1u )
+. {
+.    $self.timer = 110u;
+.    return true;
+. }
+.
+. return false;
+. }
+
+   y_y           yxy
+    @     ->      @
+
+
+== Postrules: Last ditch hold
+
+  @ -> @
+
+
+
+
+
+
+
