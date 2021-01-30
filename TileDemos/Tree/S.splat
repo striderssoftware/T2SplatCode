@@ -1,0 +1,78 @@
+# Lighted Pyramid. A demo using stuff
+= element S
+\symbol S
+\color #0f0
+#\symmetries all
+\author Dennis Lucero
+\license lgpl
+\copyright (C) 2021 The Living Computation Foundation
+
+== Data members
+u Unsigned uCount = 1u;
+u Unsigned uTotalCount = 1u;
+
+== Rules: Germination
+
+given @ isa S {
+. DebugUtils db;
+#. db.print("seed called ***********************");
+. if ( $self.uTotalCount > 120u )
+.   return true;
+.
+.  S seed;
+.
+.  TreeRow row;
+#. db.print($self.uTotalCount);
+. if ( $self.uTotalCount  % 5u == 0u )
+. {
+.  db.print("*************setting row offset");
+.  row.uOffset = 0u;
+.  row.colCount = $self.uCount;
+.  seed.uTotalCount = $self.uTotalCount + 2u;
+.
+.  if ( seed.uTotalCount > 32u )
+.  {
+.   seed.uCount = $self.uCount - 6u;
+.   ew[4] = row;  //4
+.   ew[36] = seed;
+.  }
+.
+.  if ( seed.uTotalCount < 32u && seed.uTotalCount > 12u )
+.  {
+.   seed.uCount = $self.uCount - 4u;
+.   ew[4] = row;  //4
+.   ew[20] = seed;
+.  }
+.
+.  if ( seed.uTotalCount < 12u )
+.  {
+.   seed.uCount = $self.uCount - 2u;
+.   ew[4] = row;  //4
+.   ew[8] = seed;
+.  }
+.
+. }
+.
+. if ( $self.uTotalCount % 5u != 0u )
+. {
+.  row.uOffset = 0;
+.  row.colCount = $self.uCount;
+.  seed.uTotalCount = $self.uTotalCount + 2u;
+.  seed.uCount = $self.uCount + 2u;
+.  ew[4] = row;
+.  ew[6] = seed;
+. }
+.
+.
+. return false;
+.}
+
+  @ -> _
+
+
+
+
+
+
+
+
