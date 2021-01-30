@@ -1,0 +1,22 @@
+# Tracks. Laydown Tracks - Walls
+= element S
+\symbol S
+\color #0f0
+#\symmetries all
+\author Dennis Lucero
+\license lgpl
+\copyright (C) 2021 The Living Computation Foundation
+
+= element S
+\symbol S
+\color #ff0
+
+== Rules
+change w isa Wall
+
+   _     w
+   @_ -> _@
+   _     w
+
+
+   @ -> @
