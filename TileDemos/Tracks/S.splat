@@ -1,15 +1,10 @@
-# Tracks. Laydown Tracks - Walls
-= element S
+= element S. Tracks laydown Lines of Walls
 \symbol S
-\color #0f0
+\color #ff0
 #\symmetries all
 \author Dennis Lucero
 \license lgpl
 \copyright (C) 2021 The Living Computation Foundation
-
-= element S
-\symbol S
-\color #ff0
 
 == Rules
 change w isa Wall

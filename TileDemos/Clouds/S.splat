@@ -1,5 +1,4 @@
-# A Cell with white content.
-= element S
+= element S. A Cell object with white content.
 \symbol S
 \color #0f0
 \symmetries all
