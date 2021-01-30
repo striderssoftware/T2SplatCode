@@ -10,7 +10,7 @@ u Unsigned uCount = 1u;
 
 given @ isa JacobsLadderSeedR {
 . $self.uCount = $self.uCount + 1u;
-. if ( $self.uCount > 25u )
+. if ( $self.uCount > 15u )
 .    return false;
 . }
 

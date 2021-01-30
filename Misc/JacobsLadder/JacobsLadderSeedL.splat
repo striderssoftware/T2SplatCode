@@ -9,7 +9,7 @@ u Unsigned uCount = 1u;
 == Rules: Germination
 given @ isa JacobsLadderSeedL {
 . $self.uCount = $self.uCount + 1u;
-. if ( $self.uCount > 25u )
+. if ( $self.uCount > 15u )
 .    return false;
 . }
 
