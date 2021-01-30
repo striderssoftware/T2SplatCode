@@ -1,0 +1,13 @@
+= element Note
+\symbol N
+\color #fff
+\symmetries all
+
+== Data members
+u Unsigned value = 0u;
+
+== Rules
+
+  @ -> @
+
+

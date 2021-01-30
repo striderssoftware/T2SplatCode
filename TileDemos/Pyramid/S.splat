@@ -1,0 +1,31 @@
+# A Lighted Pyramid.
+= element S
+\symbol S
+\color #ff4
+#\symmetries all
+\author Dennis Lucero
+\license lgpl
+\copyright (C) 2021 The Living Computation Foundation
+
+== Data members
+u Unsigned uCount = 1u;
+
+== Rules: Germination
+
+given @ isa S {
+. DebugUtils db;
+#. db.print("seed called");
+. if ( $self.uCount > 120u )
+.   return false;
+. LightedTreeRow row;
+. row.colCount = $self.uCount;
+. ew[4] = row;
+. S seed;
+. seed.uCount = $self.uCount + 2u;
+. ew[$cursn] = seed;
+. return true;
+.}
+
+  @ ->  _
+ _     @
+ 

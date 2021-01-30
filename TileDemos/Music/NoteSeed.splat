@@ -1,0 +1,39 @@
+= element NoteSeed
+\symbol NS
+\color #800
+#\symmetries all
+
+== Data members
+u Unsigned timer = 0u;
+
+== Rules 
+given @ isa NoteSeed {
+. DebugUtils db;
+#. db.print("******************note seed was called*");
+. $self.timer = $self.timer + 1u;
+. if ( $self.timer < 100u )
+.   return false;
+.}
+
+
+
+# cant do anything die
+given x isa Note
+
+   x    .
+   @ -> _
+
+   @ -> _
+   x    .
+
+change n isa Note  
+
+   @ ->  n 
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+
+
+

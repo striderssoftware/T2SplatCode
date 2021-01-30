@@ -1,0 +1,42 @@
+= element Line isa QPlaceSeed
+\symbol L
+\color #f00
+#\symmetries all
+
+== Data members
+u Unsigned colCount = 20u;
+u Unsigned uOffset = 0u;
+
+
+== Rules: Germination
+
+given @ isa Line{
+. DebugUtils db;
+#. db.print("seed called ***********************");
+.
+. if ( $self.colCount <= 0u ) 
+.   return false;
+.
+. if ( $self.uOffset <= 0u )
+. {
+.   StaffLine sl;
+.   ew[1] = sl;
+.
+.   $self.placeSeed();
+.}
+.
+. $self.colCount = $self.colCount - 1u;
+. $self.uOffset = $self.uOffset - 1u;
+. return true;
+. }
+
+  @_ -> _@
+  
+  @ -> @
+
+
+
+
+
+
+

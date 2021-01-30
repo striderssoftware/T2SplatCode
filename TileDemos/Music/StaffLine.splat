@@ -1,0 +1,55 @@
+= element StaffLine
+\symbol SL
+\color #0f0
+#\symmetries all
+
+== Data members
+
+
+== Rules
+given l isa StaffLine
+given n isa Note
+given e isa Empty
+
+let x = l|n
+
+let y = n|e
+
+# self healing rules
+
+   @_x -> @@x
+
+   x_@ -> x@@
+
+   @__x -> @@@x
+
+   x__@ -> x@@@
+
+   @___x -> @@@@x
+
+   x___@ -> x@@@@
+
+
+   @_      @@
+   yy  ->  yy
+   xx      xx
+
+
+   xx      xx
+   yy  ->  yy
+   @_      @@
+
+
+   _@      @@
+   yy  ->  yy
+   xx      xx
+
+
+   xx      xx
+   yy  ->  yy
+   _@      @@
+
+
+   @ -> @
+
+

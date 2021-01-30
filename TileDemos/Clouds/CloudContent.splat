@@ -1,0 +1,25 @@
+= element CloudContent isa QContent
+\symbol CC
+\color #fff
+\symmetries all
+
+== Data members
+
+== Rules
+given i isa InnerMembrane
+
+ @i -> @i
+
+given o isa OuterMembrane
+
+ @o -> @o
+
+ _@o -> @_o
+
+
+  @_ -> _@
+
+== Postrules
+
+  @ -> .     # Last ditch hold
+

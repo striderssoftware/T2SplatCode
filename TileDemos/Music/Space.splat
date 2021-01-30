@@ -1,0 +1,40 @@
+= element Space isa QPlaceSeed
+\symbol S
+\color #f00
+#\symmetries all
+
+== Data members
+u Unsigned colCount = 20u;
+u Unsigned uOffset = 0u;
+
+
+== Rules: Germination
+
+given @ isa Space{
+. DebugUtils db;
+#. db.print("seed called ***********************");
+.
+. if ( $self.colCount <= 0u ) 
+.   return false;
+.
+. if ( $self.uOffset <= 0u )
+. {
+# do nothing if not placing a seed - spaces are empty's 
+. $self.placeSeed();
+. }
+.
+. $self.colCount = $self.colCount - 1u;
+. $self.uOffset = $self.uOffset - 1u;
+. return true;
+. }
+
+  @_ -> _@
+  
+  @ -> @
+
+
+
+
+
+
+

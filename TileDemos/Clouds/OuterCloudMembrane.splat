@@ -1,0 +1,5 @@
+= element OuterCloudMembrane isa QMembrane
+\symbol OM
+\color #fff
+\symmetries all
+

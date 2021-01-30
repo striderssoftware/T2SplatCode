@@ -1,0 +1,41 @@
+= element RunSeed
+\symbol RS
+\color #800
+#\symmetries all
+
+== Data members
+u Unsigned timer = 0u;
+
+== Rules
+given @ isa RunSeed {
+. DebugUtils db;
+#. db.print("******************run seed was called*");
+. $self.timer = $self.timer + 1u;
+. if ( $self.timer < 100u )
+.   return false;
+.}
+
+given l isa StaffLine
+change n isa Note  
+
+   ..      .@
+   @l  ->  n.
+
+   ll      .@
+   @_  ->  n.
+
+   @ -> _
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+
+
+
+
+
+
+
+
+

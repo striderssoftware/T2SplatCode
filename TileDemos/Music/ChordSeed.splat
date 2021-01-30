@@ -1,0 +1,69 @@
+= element ChordSeed
+\symbol CS
+\color #800
+#\symmetries all
+
+== Data members
+u Unsigned timer = 0u;
+
+== Rules
+given @ isa ChordSeed {
+. DebugUtils db;
+#. db.print("******************chord seed was called*");
+. $self.timer = $self.timer + 1u;
+. if ( $self.timer < 100u )
+.   return false;
+.}
+
+given l isa StaffLine
+change n isa Note
+
+   .     n
+   l     l
+   @ ->  n
+   l     l
+   .     n
+
+
+   l     n
+   .     .
+   @ ->  n
+   .     .
+   l     n
+
+
+# cant do anything die
+given x isa Note
+
+   _    .
+   _    .
+   @ -> _
+
+   @ -> _
+   _    .
+   _    .
+
+   x    .
+   @ -> _
+
+   @ -> _
+   x    .
+
+# do not use other notes to complete chord, die
+
+   n    .
+   _    .
+   @ -> _
+
+
+   @ -> _
+   _    .
+   n    .
+
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+
+

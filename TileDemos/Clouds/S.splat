@@ -1,0 +1,20 @@
+# A Cell with white content.
+= element S
+\symbol S
+\color #0f0
+\symmetries all
+\author Dennis Lucero
+\license lgpl
+\copyright (C) 2021 The Living Computation Foundation
+
+== Rules
+change i isa InnerMembrane
+change o isa OuterMembrane
+change c isa CloudContentSeed
+
+  ......    oooooo
+  ......    oiiiio
+  ...@.. -> oiccio
+  ......    oiiiio
+  ......    oooooo
+
