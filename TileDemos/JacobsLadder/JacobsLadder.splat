@@ -4,18 +4,18 @@
 #\symmetries all
 
 == Data members
-u Unsigned timer = 210u;
+u constant Unsigned cDURATION = 400u;
+u Unsigned timer = cDURATION;
 
 == Rules
 change x isa JLArc
 given y isa JacobsLadder
 
-
 given @ isa JacobsLadder {
 . $self.timer = $self.timer - 1u; 
 . if ( $self.timer < 1u )
 . {
-.    $self.timer = 210u;
+.    $self.timer = $self.cDURATION;
 .    return true;
 . }
 .
