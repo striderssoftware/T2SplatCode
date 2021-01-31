@@ -4,7 +4,7 @@
 #\symmetries all
 
 == Data members
-u Unsigned timer = 110u;
+u Unsigned timer = 210u;
 
 == Rules
 change x isa JLArc
@@ -15,7 +15,7 @@ given @ isa JacobsLadder {
 . $self.timer = $self.timer - 1u; 
 . if ( $self.timer < 1u )
 . {
-.    $self.timer = 110u;
+.    $self.timer = 210u;
 .    return true;
 . }
 .
