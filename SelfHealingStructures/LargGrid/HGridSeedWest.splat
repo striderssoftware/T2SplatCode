@@ -1,0 +1,36 @@
+= element HGridSeedWest
+\symbol hw
+\color #0f3
+#\audio #000
+#\symmetries all
+
+== Data members
+u Unsigned count = 0u;
+
+== Rules
+given @ isa HGridSeedWest{
+. DebugUtils db;
+. db.print("******************given");
+. $self.count++;
+. if ( $self.count %7u == 0u )
+. {
+#.   db.print("count == 7");
+.  Junction j;
+.  HGridSeedWest & seed = (HGridSeedWest &)ew[0];
+.  ew[1] = seed;
+.  ew[0] = Empty.instanceof;
+.  ew[4] = j;
+. }
+. else
+. {
+.  Grid newgrid;
+.  HGridSeedWest & seed = (HGridSeedWest &)ew[0];
+.  ew[1] = seed;
+.  ew[0] = Empty.instanceof;
+.  ew[4] = newgrid;
+. }
+.
+.}
+
+   @  -> @
+

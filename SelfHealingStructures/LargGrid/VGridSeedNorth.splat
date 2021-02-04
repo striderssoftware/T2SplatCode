@@ -1,0 +1,36 @@
+= element VGridSeedNorth
+\symbol vn
+\color #0f3
+#\audio #000
+#\symmetries all
+
+== Data members
+u Unsigned count = 0u;
+
+== Rules
+given @ isa VGridSeedNorth{
+. DebugUtils db;
+#. db.print("******************given");
+. $self.count++;
+. if ( $self.count %7u == 0u )
+. {
+.   db.print("count == 7");
+.  Junction j;
+.  VGridSeedNorth & seed = (VGridSeedNorth &)ew[0];
+.  ew[2] = seed;
+.  ew[0] = Empty.instanceof;
+.  ew[3] = j;
+. }
+. else
+. {
+.  Grid newgrid;
+.  VGridSeedNorth & seed = (VGridSeedNorth &)ew[0];
+.  ew[2] = seed;
+.  ew[0] = Empty.instanceof;
+.  ew[3] = newgrid;
+. }
+.
+.}
+
+   @  -> @
+

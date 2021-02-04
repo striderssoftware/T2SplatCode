@@ -1,0 +1,37 @@
+= element VGrid
+\symbol vg
+\color #0f3
+#\audio #000
+#\symmetries all
+
+== Data members
+
+== Rules
+given j isa Junction
+change x isa VGrid
+change z isa Junction
+
+  _       z
+  @       .
+  .       .
+  .       .
+  .       .
+  j  ->   .
+
+
+  j      .
+  .      .
+  .      .
+  .      .
+  @      .
+  _  ->  z
+
+
+  @      .
+  _  ->  x
+
+  _      x
+  @  ->  .
+
+
+  @ -> @

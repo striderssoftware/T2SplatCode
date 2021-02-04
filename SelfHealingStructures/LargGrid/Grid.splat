@@ -1,0 +1,13 @@
+= element Grid
+\symbol g
+\color #0f3
+#\audio #000
+#\symmetries all
+
+== Data members
+u Unsigned count = 0u;
+
+== Rules
+
+   @  -> @
+

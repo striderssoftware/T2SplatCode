@@ -1,0 +1,22 @@
+= element Junction
+\symbol j
+\color #f00
+#\audio #000
+#\symmetries all
+
+== Data members
+
+== Rules
+change n isa VGridSeedNorth
+change s isa VGridSeedSouth
+change e isa HGridSeedEast
+change w isa HGridSeedWest
+
+   .        n
+   .        .
+ ..@.. -> w...e
+   .        .
+   .        s
+
+   @ -> @
+
