@@ -1,0 +1,18 @@
+= element Junction
+\symbol j
+\color #f40
+#\audio #000
+#\symmetries all
+
+== Data members
+
+== Rules
+change x isa HGrid
+change y isa VGrid
+
+   .       y
+  .@. ->  x.x
+   .       y
+
+   @ -> @
+

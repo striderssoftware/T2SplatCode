@@ -1,0 +1,16 @@
+= element XSeed
+\symbol xs
+\color #0f0
+#\audio #000
+\symmetries all
+
+== Data members
+
+== Rules
+change x isa X
+
+   x       x
+  x@x ->  x.x
+   x       x
+
+   @ -> @

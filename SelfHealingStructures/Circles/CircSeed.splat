@@ -1,0 +1,16 @@
+= element CircSeed
+\symbol cs
+\color #f00
+#\audio #000
+\symmetries all
+
+== Data members
+
+== Rules
+change x isa Circ
+
+   x       x
+  x@x ->  x_x
+   x       x
+
+   @ -> @

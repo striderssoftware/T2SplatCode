@@ -1,0 +1,18 @@
+= element X3
+\symbol x3
+\color #0f0
+#\audio #000
+\symmetries all
+
+== Data members
+
+== Rules
+given c isa X
+given x isa Empty
+change x isa X
+
+    @       @
+   ._x  -> ._x
+    c       c
+
+   @ -> @

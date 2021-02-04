@@ -1,0 +1,21 @@
+= element Circ3
+\symbol c
+\color #f00
+#\audio #000
+\symmetries all
+
+== Data members
+
+== Rules
+given c isa Circ3
+vote x isa Empty 
+change x isa Circ3
+ 
+   @         @
+  ._x       ._x
+ .___x ->  .___x
+  ._.       ._.
+   c         .
+
+ @ -> @
+
