@@ -11,12 +11,28 @@ change n isa VGridSeedNorth
 change s isa VGridSeedSouth
 change e isa HGridSeedEast
 change w isa HGridSeedWest
+change x isa Grid
 
-   .        n
-   .        .
- ..@.. -> w...e
-   .        .
-   .        s
+   _        n
+   _        x
+ __@__ -> wx.xe
+   _        x
+   _        s
+
+
+   @__ -> .xe
+
+   __@ -> wx.
+
+
+   _      n
+   _      g
+   @  ->  .
+
+
+   @      .
+   _      g
+   _  ->  s
 
    @ -> @
 

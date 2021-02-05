@@ -8,6 +8,15 @@
 u Unsigned count = 0u;
 
 == Rules
+given x isa HGridSeedEast
+change y isa Grid
+
+  x@ -> yy
+
+given z isa Junction
+
+  z@  -> zy
+  
 given @ isa HGridSeedWest{
 . DebugUtils db;
 . db.print("******************given");

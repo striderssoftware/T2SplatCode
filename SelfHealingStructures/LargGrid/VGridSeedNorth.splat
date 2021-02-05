@@ -8,6 +8,17 @@
 u Unsigned count = 0u;
 
 == Rules
+given x isa VGridSeedSouth
+change y isa Grid
+
+  x    y
+  @ -> y
+
+given z isa Junction
+
+  z      z
+  @  ->  y
+
 given @ isa VGridSeedNorth{
 . DebugUtils db;
 #. db.print("******************given");
