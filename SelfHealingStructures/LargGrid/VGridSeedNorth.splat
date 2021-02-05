@@ -8,40 +8,29 @@
 u Unsigned count = 0u;
 
 == Rules
-given x isa VGridSeedSouth
-change y isa Grid
-
-  x    y
-  @ -> y
-
-given z isa Junction
-
-  z      z
-  @  ->  y
-
 given @ isa VGridSeedNorth{
 . DebugUtils db;
 #. db.print("******************given");
 . $self.count++;
 . if ( $self.count %7u == 0u )
 . {
-.   db.print("count == 7");
+#.   db.print("count == 7");
 .  Junction j;
-.  VGridSeedNorth & seed = (VGridSeedNorth &)ew[0];
-.  ew[2] = seed;
-.  ew[0] = Empty.instanceof;
 .  ew[3] = j;
 . }
 . else
 . {
 .  Grid newgrid;
-.  VGridSeedNorth & seed = (VGridSeedNorth &)ew[0];
-.  ew[2] = seed;
-.  ew[0] = Empty.instanceof;
 .  ew[3] = newgrid;
 . }
 .
 .}
+#given s isa Stationary
+given j isa Junction
+given g isa Grid
+let c = j|g
 
-   @  -> @
+  _     @
+  @     _
+  c  -> c
 
