@@ -1,4 +1,4 @@
-= element VGridSeedNorth
+= element VGridSeedNorth isa QSeed
 \symbol vn
 \color #0f3
 #\audio #000
@@ -12,7 +12,7 @@ given @ isa VGridSeedNorth{
 . DebugUtils db;
 #. db.print("******************given");
 . $self.count++;
-. if ( $self.count %7u == 0u )
+. if ( $self.count % $self.size == 0u )
 . {
 #.   db.print("count == 7");
 .  Junction j;
