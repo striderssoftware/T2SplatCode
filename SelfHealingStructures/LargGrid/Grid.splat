@@ -2,12 +2,27 @@
 \symbol g
 \color #0f3
 #\audio #000
-#\symmetries all
+\symmetries all
 
 == Data members
 u Unsigned count = 0u;
 
 == Rules
+given j isa Junction
+given g isa Grid
+change y isa Grid
+let x = j|g
 
-   @  -> @
+vote e isa Empty
+
+  x@eeex  ->  .@yyy. 
+
+change z isa Junction
+   .      .
+  g@. -> .z.
+   g      .
+
+
+
+  @  -> @
 
