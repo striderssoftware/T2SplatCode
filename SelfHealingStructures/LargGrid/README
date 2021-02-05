@@ -3,4 +3,4 @@ Create a self healing grid where the "units" or "squares" are bigger then the Ev
 
 Any Junction object will act as a seed to create a Grid accross the entire world.
 
-If this grid is "nuked" it will heal. If one nuke does not start the healing process, nuke it again. I have yet to see a series of "nukes" destroy the entire grid, it always gets into a healing state.
+If this grid is "nuked" it will heal. If one nuke does not start the healing process, nuke it again. A series of "nukes" will usually not destroy the entire grid, it usually gets into a healing state.
