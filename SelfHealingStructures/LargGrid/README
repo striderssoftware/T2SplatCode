@@ -3,10 +3,20 @@ Create a self healing grid where the "units" or "squares" are bigger then the Ev
 
 Any Junction object will act as a seed to create a Grid accross the entire world.
 
-If this grid is "nuked" it will heal. If one nuke does not start the healing process, nuke it again. A series of "nukes" will usually not destroy the entire grid, it usually gets into a healing state.
+If this grid is "nuked" it will heal. If one nuke does not start the healing process,
+nuke it again. A series of "nukes" will usually not destroy the entire grid, it usually gets into a healing state.
 
 
 Change notes:
 Commit: 72385da83fb414120105dd8f6eb5c285c17c0767
 A result of this change is the Grid no longer has a mechanisum for, but still supports, controling its total size (not the unit size).
+
+Commit: a91fab79d81ef9ef733dbb201827d6f70bc4817d
+A result of this change is the Grid no longer supports controlling its total size (not the unit size). The Grid is now a structured
+ForkBomb where the size is only controled by available resources (Res). Perhaps this is how it should work, I dont know. This same change made
+th Grid extremmly robust once created.
+
+With Large unit sizes the size of the "nuked" space is too small to effect a grid with large unit sizes, perhaps this is a scaling issue,
+but I believe once the Grid is created only huge end-to-end deletions can harm it.
+
 
