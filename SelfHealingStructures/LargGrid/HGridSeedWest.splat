@@ -10,11 +10,9 @@ u Unsigned count = 0u;
 == Rules
 given @ isa HGridSeedWest{
 . DebugUtils db;
-#. db.print("******************given");
 . $self.count++;
 . if ( $self.count >= $self.size )
 . {
-#.  db.print($self.sount);
 .  Junction j;
 .  ew[4] = j;
 .  $self.count = 0u;

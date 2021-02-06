@@ -10,11 +10,9 @@ u Unsigned count = 0u;
 == Rules
 given @ isa VGridSeedSouth{
 . DebugUtils db;
-#. db.print("******************given");
 . $self.count++;
 . if ( $self.count >= $self.size )
 . {
-#.  db.print($self.size);
 .  Junction j;
 .  ew[2] = j;
 .  $self.count = 0u;
