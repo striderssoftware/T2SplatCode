@@ -12,11 +12,12 @@ given @ isa VGridSeedSouth{
 . DebugUtils db;
 #. db.print("******************given");
 . $self.count++;
-. if ( $self.count % $self.size == 0u )
+. if ( $self.count >= $self.size )
 . {
-#.   db.print("count == 7");
+#.  db.print($self.size);
 .  Junction j;
 .  ew[2] = j;
+.  $self.count = 0u;
 . }
 . else
 . {
@@ -26,7 +27,7 @@ given @ isa VGridSeedSouth{
 .
 .}
 
-#given s isa Stationary
+
 given j isa Junction
 given g isa Grid
 let c = j|g

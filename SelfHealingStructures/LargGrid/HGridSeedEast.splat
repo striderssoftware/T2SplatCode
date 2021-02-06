@@ -12,11 +12,12 @@ given @ isa HGridSeedEast{
 . DebugUtils db;
 #. db.print("******************given");
 . $self.count++;
-. if ( $self.count % $self.size == 0u )
+. if ( $self.count >= $self.size )
 . {
-#.   db.print("count == 7");
+#.  db.print("count == 7");
 .  Junction j;
 .  ew[1] = j;
+.  $self.count = 0u;
 . }
 . else
 . {
@@ -26,7 +27,6 @@ given @ isa HGridSeedEast{
 .
 .}
 
-#given s isa Stationary
 given j isa Junction
 given g isa Grid
 let c = j|g
