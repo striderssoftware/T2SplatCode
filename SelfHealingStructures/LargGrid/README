@@ -13,8 +13,8 @@ A result of this change is the Grid no longer has a mechanisum for, but still su
 
 Commit: a91fab79d81ef9ef733dbb201827d6f70bc4817d
 A result of this change is the Grid no longer supports controlling its total size (not the unit size). The Grid is now a structured
-ForkBomb where the size is only controled by available resources (Res). Perhaps this is how it should work, I dont know. This same change made
-th Grid extremmly robust once created.
+ForkBomb where the size can only be controled by limiting available resources (Res). Perhaps this is how it should work, I dont know.
+This same change made the Grid extremmly robust once created.
 
 With Large unit sizes the size of the "nuked" space is too small to effect a grid with large unit sizes, perhaps this is a scaling issue,
 but I believe once the Grid is created only huge end-to-end deletions can harm it.
