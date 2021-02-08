@@ -1,0 +1,20 @@
+= element Pos
+\symbol p
+\color #00f
+#\audio #000
+\symmetries all
+
+== Data members
+u Unsigned count = 0u;
+
+== Rules
+given n isa Neg
+
+  ._     .@
+  @n  -> _n
+
+given p isa Pos
+
+  _@p  -> @_p
+
+  @ -> @

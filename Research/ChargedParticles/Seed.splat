@@ -1,0 +1,19 @@
+= element Seed
+\symbol s
+\color #00f
+#\audio #000
+\symmetries all
+
+== Data members
+u Unsigned count = 0u;
+
+== Rules
+
+change p isa Pos
+change n isa Neg
+
+  @__  -> @pn
+
+  @_  -> _@
+
+   @  -> @

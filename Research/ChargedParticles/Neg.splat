@@ -1,0 +1,21 @@
+= element Neg
+\symbol n
+\color #0f0
+#\audio #000
+\symmetries all
+
+== Data members
+u Unsigned count = 0u;
+
+== Rules
+given p isa Pos
+
+  ._     .@
+  @p  -> _p
+
+given n isa Neg
+
+  _@n  -> @_n 
+
+  @  -> @
+
