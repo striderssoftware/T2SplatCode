@@ -1,0 +1,17 @@
+
+Create a self healing grid where the "units" or "squares" are bigger then the EventWindow.
+
+Any Junction (S object) object will act as a seed to create a Grid accross the entire world.
+
+If this grid is "nuked" it will heal.
+
+The Grid is now a structured ForkBomb where the size can only be controled by limiting available resources (Res).
+Perhaps this is how it should work, I dont know.
+
+The same changes that make the Grid robust, make it difficult or impossible to bound the Total size of the grid..
+
+With Large unit sizes the size of the "nuked" space is too small to have a big effect on a grid with large unit sizes,
+perhaps this is a scaling issue, but I believe that for the parts of the grid that have been created only huge
+end-to-end deletions can harm it.
+
+

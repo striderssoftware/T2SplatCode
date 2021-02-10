@@ -1,0 +1,24 @@
+= element HGrid
+\symbol hg
+\color #0f3
+#\audio #000
+#\symmetries all
+
+== Data members
+
+== Rules
+given j isa S
+change x isa HGrid
+change z isa S
+
+  _@...j -> z.....
+
+  j...@_ -> .....z
+  
+  @_ -> .x
+  
+  _@ -> x.
+
+
+
+ @ -> @

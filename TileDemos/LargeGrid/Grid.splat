@@ -1,0 +1,28 @@
+= element Grid
+\symbol g
+\color #0f3
+#\audio #000
+\symmetries all
+
+== Data members
+u Unsigned count = 0u;
+
+== Rules
+given j isa S
+given g isa Grid
+change y isa Grid
+let x = j|g
+
+vote e isa Empty
+
+  xeee@eeex  ->  .yyy@yyy. 
+
+change z isa S
+   .      .
+  g@. -> .z.
+   g      .
+
+  x@___  -> ..yyy   
+
+  @  -> @
+

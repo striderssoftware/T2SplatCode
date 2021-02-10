@@ -1,0 +1,4 @@
+
+Any Junction (S object ) object will act as a seed to create a Grid accross the entire world.
+
+If this Grid is "Nuked" it will heal correctly.

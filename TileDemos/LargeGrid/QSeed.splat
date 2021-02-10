@@ -1,0 +1,6 @@
+= quark QSeed
+
+
+== Data members
+u Unsigned size = 15u;
+

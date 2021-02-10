@@ -1,0 +1,35 @@
+= element VGridSeedNorth isa QSeed
+\symbol vn
+\color #0f3
+#\audio #000
+#\symmetries all
+
+== Data members
+u Unsigned count = 0u;
+
+== Rules
+given @ isa VGridSeedNorth{
+. DebugUtils db;
+. $self.count++;
+. if ( $self.count >= $self.size )
+. {
+.  S j;
+.  ew[3] = j;
+. $self.count = 0u;
+. }
+. else
+. {
+.  Grid newgrid;
+.  ew[3] = newgrid;
+. }
+.
+.}
+
+given j isa S
+given g isa Grid
+let c = j|g
+
+  _     @
+  @     _
+  c  -> c
+

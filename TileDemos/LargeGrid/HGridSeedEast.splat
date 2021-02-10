@@ -1,0 +1,32 @@
+= element HGridSeedEast isa QSeed
+\symbol he
+\color #0f3
+#\audio #000
+#\symmetries all
+
+== Data members
+u Unsigned count = 0u;
+
+== Rules
+given @ isa HGridSeedEast{
+. DebugUtils db;
+. $self.count++;
+. if ( $self.count >= $self.size )
+. {
+.  S j;
+.  ew[1] = j;
+.  $self.count = 0u;
+. }
+. else
+. {
+.  Grid newgrid;
+.  ew[1] = newgrid;
+. }
+.
+.}
+
+given j isa S
+given g isa Grid
+let c = j|g
+
+  c@_ -> c_@

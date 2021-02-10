@@ -1,0 +1,38 @@
+= element S
+\symbol s
+\color #f00
+#\audio #000
+#\symmetries all
+
+== Data members
+
+== Rules
+change n isa VGridSeedNorth
+change s isa VGridSeedSouth
+change e isa HGridSeedEast
+change w isa HGridSeedWest
+change x isa Grid
+
+   _        n
+   _        x
+ __@__ -> wx.xe
+   _        x
+   _        s
+
+
+   @__ -> .xe
+
+   __@ -> wx.
+
+
+   _      n
+   _      g
+   @  ->  .
+
+
+   @      .
+   _      g
+   _  ->  s
+
+   @ -> @
+
