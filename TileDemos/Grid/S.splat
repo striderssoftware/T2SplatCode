@@ -1,8 +1,10 @@
-= element S
-\symbol s
+= element S. A Junction. This creates a Grid accross the entire world
+\symbol S
 \color #f00
-#\audio #000
 #\symmetries all
+\author Dennis Lucero
+\license lgpl
+\copyright (C) 2021 The Living Computation Foundation
 
 == Data members
 
