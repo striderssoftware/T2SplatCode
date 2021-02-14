@@ -1,0 +1,24 @@
+= element JacobsLadderStartSeed
+\symbol SS
+\color #f00
+#\symmetries all
+
+== Rules
+change x isa JacobsLadderSeedL
+change y isa JacobsLadderSeedR
+change r isa JacobsLadderSeedDR
+change l isa JacobsLadderSeedDL
+change z isa JacobsLadder
+change a isa JLArc
+change d isa JLArcDown
+change e isa JLArcEast
+change w isa JLArcWest
+
+   ...      xay
+   .@.   -> wze
+   ...      ldr
+
+
+
+
+

@@ -1,0 +1,18 @@
+= element JacobsLadderSeedR isa QLadderSeed
+\symbol LR
+\color #f00
+\symmetries flipx
+
+== Data members
+
+== Rules: Growth
+
+
+
+
+
+
+
+
+
+

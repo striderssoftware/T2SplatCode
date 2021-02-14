@@ -1,0 +1,16 @@
+= element JacobsLadderSeedL isa QLadderSeed
+\symbol LL
+\color #f00
+#\symmetries all
+
+== Data members
+
+
+== Rules: Growth
+
+
+
+
+
+
+

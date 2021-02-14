@@ -1,0 +1,19 @@
+= quark QLadderSeed
+\symbol LL
+\color #f00
+#\symmetries all   # ladder left 
+
+== Data members
+u Unsigned uCount = 1u;
+
+== Rules: Growth
+change x isa JacobsLadder
+
+ _       @
+  @   ->  x
+
+
+
+
+
+

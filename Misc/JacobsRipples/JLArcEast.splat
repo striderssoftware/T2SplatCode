@@ -1,0 +1,69 @@
+= element JLArcEast
+\symbol AE
+\color #00f
+#\symmetries 
+
+== Rules
+given x isa JLArcEast
+given y isa JacobsLadder
+change z isa JLArcEast
+
+
+  y      y
+  _      z
+  @  ->  @     # grow to ladder
+
+  @      @
+  _      z
+  y  ->  y     # grow to ladder
+
+  y     y
+  @_    _@
+  y  -> y      # start up
+
+  x      x
+  @_     _@
+  x   -> x     # grow 
+
+  x       x
+  .@      .@
+  x  ->   x     # wait up
+
+   x       x
+  @_      _@
+   x  ->   x    # catch up 
+
+  x_       x_
+  .@  ->   .@   # wait up end
+
+
+  .@      .@
+  x_  ->  x_   # wait up end
+
+
+  @_      _@
+  .x  ->  .x   # catch up end
+
+  .x      .x
+  @_  ->  _@   # catch up end
+
+
+  _      _
+  _      _
+  _      _
+  _      _
+  @  ->  _       # Die
+
+
+  @      _
+  _      _
+  _      _
+  _      _
+  _  ->  _      # Die
+
+
+== Postrules: Last ditch hold
+
+  @ -> .
+
+
