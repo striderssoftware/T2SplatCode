@@ -2,6 +2,43 @@
 INHERITANCE:
 you can only inherit from a Quark
 ---------------------------
+symmetries:
+
+Usage:
+= element Example
+\symbol E
+\color #00e
+\symmetries none
+
+This rule:
+  _      @
+   @  ->  _   # move
+
+*****
+with:
+/symmetries none
+
+will move Diagonally to the North West.
+
+*****
+with:
+/symmetries flipx
+
+will move Diagonally to the North East
+
+*****
+with:
+/symmetries flipy
+
+will move Diagonally to the South West
+
+*****
+with:
+/symmetries flipxy
+
+will move Diagonally to the South East
+
+---------------------------
 GET COORD
 A function on the EventWindow
 
