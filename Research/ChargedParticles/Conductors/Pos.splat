@@ -15,6 +15,12 @@ change n isa Neg
 
  g@ww  ->  wl@w
 
+ _@ww     wl@w
+ _g   ->  __     
+
+ _g        __
+ _@ww  ->  wl@w
+
  t@w  ->  wt@
 
  t@_  ->  _np
