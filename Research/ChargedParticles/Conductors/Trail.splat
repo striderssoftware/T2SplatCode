@@ -1,0 +1,9 @@
+= element Trail
+\symbol Tr
+\color #f00
+\symmetries all
+
+
+== Rules:
+
+  @ -> .

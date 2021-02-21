@@ -1,0 +1,37 @@
+= element Pos
+\symbol P
+\color #0f0
+\symmetries all
+
+
+== Rules:
+# Conductor (Walls)
+given w isa Wall
+given t isa Trail
+given g isa Neg
+change l isa Trail
+change p isa Pos
+change n isa Neg
+
+ g@ww  ->  wl@w
+
+ t@w  ->  wt@
+
+ t@_  ->  _np
+
+# Behavior
+given n isa Neg
+
+  ._     .@
+  @n  -> _n
+
+given p isa Pos
+
+  _@p  -> @_p
+
+  @ -> @
+
+
+== Postrules: Last ditch hold
+
+  @ -> .
