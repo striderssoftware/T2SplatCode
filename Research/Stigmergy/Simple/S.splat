@@ -1,0 +1,18 @@
+= element S
+\symbol S
+\color #f00
+\symmetries all
+\author Dennis Lucero
+\license lgpl
+\copyright (C) 2021 The Living Computation Foundation
+
+
+== Data members
+
+== Rules:
+given t  isa Track
+change w  isa Wall
+
+ @t  -> w@
+
+ @  -> @

@@ -1,0 +1,17 @@
+= element Track
+\symbol T
+\color #0f0
+#\symmetries all
+\author Dennis Lucero
+\license lgpl
+\copyright (C) 2021 The Living Computation Foundation
+
+
+== Data members
+
+== Rules
+
+  @ -> @
+
+
+

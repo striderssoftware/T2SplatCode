@@ -1,0 +1,20 @@
+= element Trace
+\symbol T
+\color #0f0
+\symmetries all
+
+
+== Rules: 
+given w isa Wall
+given t isa Trail
+change l isa Trail
+
+ _@ww  ->  wl@w
+
+ t@w  ->  wt@
+
+ t@_  ->  ww_
+
+== Postrules: Last ditch hold
+
+  @ -> .

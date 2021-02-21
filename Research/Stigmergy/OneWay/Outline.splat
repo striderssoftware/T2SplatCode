@@ -1,0 +1,25 @@
+#####
+= element Outline
+\symbol oo
+\color #0f0
+\symmetries all
+
+
+== Rules: 
+given @ isa Outline
+given b isa Wall
+given o isa Otherway
+change x isa Otherway
+
+  @_       x@
+ _bb  ->  .bb
+
+ o@_      _x@
+ bbb  ->  bbb
+
+
+
+
+== Postrules: Last ditch hold
+
+  @ -> .
