@@ -1,0 +1,9 @@
+= element Conductor isa QConductor
+\symbol c
+\color #055
+\symmetries all
+
+
+== Rules
+
+   @  -> @

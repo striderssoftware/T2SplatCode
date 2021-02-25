@@ -6,22 +6,22 @@
 
 == Rules:
 # Conductor (Walls)
-given w isa Wall
+given c isa QConductor
 given t isa Trail
 given g isa Neg
 change l isa Trail
 change p isa Pos
 change n isa Neg
 
- g@ww  ->  wl@w
+ g@cc  ->  cl@c
 
- _@ww     wl@w
+ _@cc     cl@c
  _g   ->  __     
 
  _g        __
- _@ww  ->  wl@w
+ _@cc  ->  cl@c
 
- t@w  ->  wt@
+ t@c  ->  ct@
 
  t@_  ->  _np
 
