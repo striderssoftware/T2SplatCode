@@ -77,15 +77,18 @@ ls /dev/tty* | grep usb
 SecureCRT Port Setting:
 /dev/cu.usbserial-0001
 
+Was able to get a sucesfull login and shell to
+a Raspery Pi.
+
 -----------------------
 changes to Rasberry Pi:
 
 sudo raspi-config
 into Interface Options ( different then guide )
 and enabled all serial options  
-(Enabled the login shell and the  serial interface)
+(Enabled the login shell and the serial interface)
 
-I used this guid but with noted changes.
+I used this guide but with noted changes.
 https://learn.adafruit.com/adafruits-raspberry-pi-lesson-5-using-a-console-cable/enabling-serial-console
 
 
