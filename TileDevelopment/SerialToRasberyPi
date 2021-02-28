@@ -1,6 +1,32 @@
 
-For Enabling Serial on the Rasberr Pi
+For Enabling Serial on the Rasberry Pi
 See Changes to Rasberry Pi in this document.
+
+--------------------
+The Serial Adapater:
+
+Adafruit USB to TTL Serial Cable - Debug / Console Cable for Raspberry Pi Product ID: 954
+https://www.adafruit.com/product/954#technical-details
+
+-------
+Ubuntu:
+before connecting the USB serial adapter:
+trider@ubuntu:~$ dmesg | grep tty
+[    0.155883] printk: console [tty0] enabled
+[    2.876652] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+
+After connecting:
+
+strider@ubuntu:~$ dmesg | grep tty
+[    0.155883] printk: console [tty0] enabled
+[    2.876652] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[95535.877102] usb 2-2.2: cp210x converter now attached to ttyUSB0
+strider@ubuntu:~$
+
+----
+Mac:
+ls /dev/tty* | grep usb
+/dev/tty.usbserial-0001
 
 
 ---------------------------------
@@ -18,27 +44,10 @@ the command minicom -s brings up the setup menu
 my term env var is:
 TERM=xterm-256color
 
-
-before connecting the USB serial adapter:
-trider@ubuntu:~$ dmesg | grep tty
-[    0.155883] printk: console [tty0] enabled
-[    2.876652] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
-
-After connecting:
-
-strider@ubuntu:~$ dmesg | grep tty
-[    0.155883] printk: console [tty0] enabled
-[    2.876652] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
-[95535.877102] usb 2-2.2: cp210x converter now attached to ttyUSB0
-strider@ubuntu:~$
-
-
-and then:
-
-Went in MinCom settings
+MinCom settings
 sudo minicom -s
 
-and into:
+go into:
 Serial Port Setup
 
 changed the serial settings to use:
@@ -47,14 +56,13 @@ and both Hardware and Sofware Flow control to NO
 
 did NOT change:
 Bps/Par/Bits at 115200 8N1
-
 accepted the above as the default.
 
-Was able to get a sucesfull login and shell to
-a Raspery Pie using the:
-Adafruit USB to TTL Serial Cable - Debug / Console Cable for Raspberry Pi Product ID: 954
-https://www.adafruit.com/product/954#technical-details
+Went in to the Modem and dialing menu and removed all
+information in setting options A through I 
 
+Was able to get a sucesfull login and shell to
+a Raspery Pi.
 
 ---------------------------------
 SecureCRT:  ( From a Mac ) :
@@ -62,7 +70,7 @@ SecureCRT:  ( From a Mac ) :
 Same USB device as MiniCom
 Same Serial settings as MiniCom
 
-Port:  ( on a Mac )
+Port:
 ls /dev/tty* | grep usb
 /dev/tty.usbserial-0001
 
@@ -71,6 +79,7 @@ SecureCRT Port Setting:
 
 -----------------------
 changes to Rasberry Pi:
+
 sudo raspi-config
 into Interface Options ( different then guide )
 and enabled all serial options  
