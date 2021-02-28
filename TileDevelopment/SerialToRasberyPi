@@ -4,7 +4,7 @@ See Changes to Rasberry Pi in this document.
 
 
 ---------------------------------
-MiniCom:
+MiniCom:  ( From an Ubuntu VM ) :
 -------
 
 used this guide:
@@ -18,7 +18,8 @@ the command minicom -s brings up the setup menu
 my term env var is:
 TERM=xterm-256color
 
-before connecting the USB serial adapter
+
+before connecting the USB serial adapter:
 trider@ubuntu:~$ dmesg | grep tty
 [    0.155883] printk: console [tty0] enabled
 [    2.876652] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
@@ -54,6 +55,19 @@ a Raspery Pie using the:
 Adafruit USB to TTL Serial Cable - Debug / Console Cable for Raspberry Pi Product ID: 954
 https://www.adafruit.com/product/954#technical-details
 
+
+---------------------------------
+SecureCRT:  ( From a Mac ) :
+----------
+Same USB device as MiniCom
+Same Serial settings as MiniCom
+
+Port:  ( on a Mac )
+ls /dev/tty* | grep usb
+/dev/tty.usbserial-0001
+
+SecureCRT Port Setting:
+/dev/cu.usbserial-0001
 
 -----------------------
 changes to Rasberry Pi:
