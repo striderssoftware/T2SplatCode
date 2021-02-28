@@ -1,0 +1,68 @@
+
+For Enabling Serial on the Rasberr Pi
+See Changes to Rasberry Pi in this document.
+
+
+---------------------------------
+MiniCom:
+-------
+
+used this guide:
+https://help.ubuntu.com/community/Minicom
+
+This install worked fine with no dependecies:
+sudo apt-get install minicom
+
+the command minicom -s brings up the setup menu
+
+my term env var is:
+TERM=xterm-256color
+
+before connecting the USB serial adapter
+trider@ubuntu:~$ dmesg | grep tty
+[    0.155883] printk: console [tty0] enabled
+[    2.876652] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+
+After connecting:
+
+strider@ubuntu:~$ dmesg | grep tty
+[    0.155883] printk: console [tty0] enabled
+[    2.876652] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[95535.877102] usb 2-2.2: cp210x converter now attached to ttyUSB0
+strider@ubuntu:~$
+
+
+and then:
+
+Went in MinCom settings
+sudo minicom -s
+
+and into:
+Serial Port Setup
+
+changed the serial settings to use:
+serial  device : /dev/ttyUSB0
+and both Hardware and Sofware Flow control to NO
+
+did NOT change:
+Bps/Par/Bits at 115200 8N1
+
+accepted the above as the default.
+
+Was able to get a sucesfull login and shell to
+a Raspery Pie using the:
+Adafruit USB to TTL Serial Cable - Debug / Console Cable for Raspberry Pi Product ID: 954
+https://www.adafruit.com/product/954#technical-details
+
+
+-----------------------
+changes to Rasberry Pi:
+sudo raspi-config
+into Interface Options ( different then guide )
+and enabled all serial options  
+(Enabled the login shell and the  serial interface)
+
+I used this guid but with noted changes.
+https://learn.adafruit.com/adafruits-raspberry-pi-lesson-5-using-a-console-cable/enabling-serial-console
+
+
