@@ -1,0 +1,23 @@
+
+for Enabling Serial on the Beagle Green.
+Nothing was needed serial was ON.
+
+--------------------
+The Serial Adapater:
+
+Adafruit USB to TTL Serial Cable - Debug / Console Cable for Raspberry Pi Product ID: 954
+https://www.adafruit.com/product/954#technical-details
+
+
+Folow the same steps for SerialToRasberryPi except for the physical connection.
+
+------------
+Connection:
+
+Connect the wires to the J1 headers on your BeagleBone Green or Black as shown:
+Note: pin 1 is nearist to the USB connector
+
+Black wire to Pin 1
+Green wire to Pin 4
+White wire to Pin 5
+

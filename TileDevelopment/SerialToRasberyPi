@@ -28,6 +28,19 @@ Mac:
 ls /dev/tty* | grep usb
 /dev/tty.usbserial-0001
 
+------------
+Connection:
+
+Black lead to GND (3rd pin down)
+White lead to TXD  (4th pin down)
+Green lead to RXD (5th pin down)
+For Power: Red lead to 5V  
+
+on the side furthest from the usb
+
+U
+S    *******R
+B    ***GWB**
 
 ---------------------------------
 MiniCom:  ( From an Ubuntu VM ) :
