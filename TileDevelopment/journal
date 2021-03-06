@@ -27,12 +27,21 @@ Ethernet:
 RJ45 was connected before boot.
 (hmm, BeagleBoard Green's do not have Ethernet)
 
+----
+SSH:
+Made a SSH connection with
+SecureCRT
+Looked at my DHCP table to find the ip.
+
+Logged in and got a shell
+I want to setup a static IP for the Tile
+
 -------
 Serial:
 Made a serial connection with
 SecureCRT
 same settings as to a Rasberry Pi
-Loged in and got a Shell
+Logged in and got a shell
 
 Question:
 Boot information is (gibberish) until login prompt. ( and sometimes even the prompt ).
