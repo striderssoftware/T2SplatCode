@@ -1,0 +1,55 @@
+
+Here is a link to first boot video:
+<comming soon>
+
+--------
+Startup:
+Plug it in.
+
+--------
+General:
+I found the tile to be much more robust then I had imagined. I could toss this accross the room to somebody.
+
+The Hardware is facinating and I am not a hardware person.
+
+It makes me want to go back and watch the early videos.
+
+I want to setup a static IP for the Tile
+
+------------
+Connections:
+Power: The ITC-PI connector can go on any of the six ITC connections. You just have to be careful to get the keying correct and get it seated properly.
+
+I used the spot below the NE corner.
+
+---------
+Ethernet:
+RJ45 was connected before boot.
+(hmm, BeagleBoard Green's do not have Ethernet)
+
+-------
+Serial:
+Made a serial connection with
+SecureCRT
+same settings as to a Rasberry Pi
+Loged in and got a Shell
+
+Question:
+Boot information is (gibberish) until login prompt. ( and sometimes even the prompt ).
+Shutdown -h now - information is readable and looks fine.
+
+---------
+Shutdown:
+I used sudo shutdown -h now
+Have yet to try a Power down
+
+
+----
+SDL:
+The SDL is installed on the Beagle Bone
+/usr/iclude/SDL
+Question: How will the SDL2 get installed.
+I believe I can apt-get install,
+bit perhaps this is not what should be done.
+I dont know.
+
