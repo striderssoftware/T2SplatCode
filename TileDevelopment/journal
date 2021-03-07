@@ -58,7 +58,7 @@ SDL:
 The SDL is installed on the Beagle Bone
 /usr/iclude/SDL
 Question: How will the SDL2 get installed.
-I believe I can apt-get install,
-bit perhaps this is not what should be done.
+I believe I could use apt-get install,
+but perhaps this is not what should be done.
 I dont know.
 
