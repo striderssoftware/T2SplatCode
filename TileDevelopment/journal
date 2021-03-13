@@ -57,8 +57,28 @@ Have yet to try a Power down
 SDL:
 The SDL is installed on the Beagle Bone
 /usr/iclude/SDL
-Question: How will the SDL2 get installed.
-I believe I can apt-get install,
-bit perhaps this is not what should be done.
-I dont know.
+I will use apt-get install to install
+the SDL2
+
+SPACE:
+it is pretty limited:
+
+t2@beaglebone:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            214M     0  214M   0% /dev
+tmpfs            49M  1.6M   47M   4% /run
+/dev/mmcblk1p1  3.5G  3.0G  272M  92% /
+tmpfs           242M     0  242M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           242M     0  242M   0% /sys/fs/cgroup
+tmpfs            49M     0   49M   0% /run/user/1001
+
+The SDL2 is pretty small.I think it would fit.
+I could always remove SDL.
+
+-----
+LIBS for SDL2 work:
+MFM/src/drivers/mfmt2/
+MFM/src/t2lib
+
 
