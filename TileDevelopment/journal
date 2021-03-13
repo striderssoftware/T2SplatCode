@@ -57,6 +57,7 @@ Have yet to try a Power down
 SDL:
 The SDL is installed on the Beagle Bone
 /usr/iclude/SDL
+
 I will use apt-get install to install
 the SDL2
 
@@ -80,5 +81,11 @@ I could always remove SDL.
 LIBS for SDL2 work:
 MFM/src/drivers/mfmt2/
 MFM/src/t2lib
+
+
+Question: How will the SDL2 get installed.
+I believe I could use apt-get install,
+but perhaps this is not what should be done.
+I dont know.
 
 
