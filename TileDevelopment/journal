@@ -61,6 +61,7 @@ The SDL is installed on the Beagle Bone
 I will use apt-get install to install
 the SDL2
 
+------
 SPACE:
 it is pretty limited:
 
@@ -74,18 +75,12 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           242M     0  242M   0% /sys/fs/cgroup
 tmpfs            49M     0   49M   0% /run/user/1001
 
-The SDL2 is pretty small.I think it would fit.
+The SDL2 is pretty small. I think it would fit.
 I could always remove SDL.
 
 -----
 LIBS for SDL2 work:
 MFM/src/drivers/mfmt2/
 MFM/src/t2lib
-
-
-Question: How will the SDL2 get installed.
-I believe I could use apt-get install,
-but perhaps this is not what should be done.
-I dont know.
 
 
