@@ -83,4 +83,36 @@ LIBS for SDL2 work:
 MFM/src/drivers/mfmt2/
 MFM/src/t2lib
 
+---------
+Building:
 
+The basic build is
+cd /home/t2/MFM;
+make.
+
+The startup scripts look for MFMT2 in
+/home/t2/MFM/bin
+
+kicked a build at 1:40
+it was done at: 2:54
+
+Question:
+if
+/home/t2/MFM/bin
+has no files in it (MFMT2)
+or has a MFMT2 that will not start.
+what would happen at startup??
+
+----------
+Code Changes:
+
+I have checked in a first pass
+all the headers were changed.
+creating screens windows was changed.
+
+I may need to pull stuff  from trunk (Ackleys repo) into
+my branch. .
+
+for this development I may want to create a new repo.
+
+----------
