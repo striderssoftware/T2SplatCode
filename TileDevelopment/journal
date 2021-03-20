@@ -42,10 +42,6 @@ SecureCRT
 same settings as to a Rasberry Pi
 Logged in and got a shell
 
-Question:
-Boot information is (gibberish) until login prompt. ( and sometimes even the prompt ).
-Shutdown -h now - information is readable and looks fine.
-
 ---------
 Shutdown:
 I used sudo shutdown -h now
