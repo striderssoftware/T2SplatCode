@@ -14,7 +14,6 @@ The Hardware is facinating and I am not a hardware person.
 
 It makes me want to go back and watch the early videos.
 
-I want to setup a static IP for the Tile
 
 ------------
 Connections:
@@ -34,7 +33,7 @@ SecureCRT
 Looked at my DHCP table to find the ip.
 
 Logged in and got a shell
-I want to setup a static IP for the Tile
+
 
 -------
 Serial:
@@ -60,6 +59,12 @@ The SDL is installed on the Beagle Bone
 
 I will use apt-get install to install
 the SDL2
+
+I am going to install these packages:
+libsdl2-2.0
+and
+libsdl2-dev
+(My branch already needs these and more but it needed synth stuff)
 
 ------
 SPACE:
@@ -102,17 +107,23 @@ if
 has no files in it (MFMT2)
 or has a MFMT2 that will not start.
 what would happen at startup??
+Answer:
+serial or ssh connections will work,
+and cdm would be running
 
 ----------
 Code Changes:
 
 I have checked in a first pass
 all the headers were changed.
-creating screens windows was changed.
-
-I may need to pull stuff  from trunk (Ackleys repo) into
-my branch. .
-
-for this development I may want to create a new repo.
+creating screens and windows was changed.
 
 ----------
+Branch:
+the head repo URL is:
+https://github.com/DaveAckley/MFM.git
+
+03/19/2021
+I did a practice merge of the head repo,
+the conflicts looked managable.
+
