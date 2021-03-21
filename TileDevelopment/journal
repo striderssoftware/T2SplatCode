@@ -51,7 +51,8 @@ and events processing - fine.
 ----
 SDL:
 Both SDL and SDL2 are installed on the Tile (Beagle Bone)
-/usr/iclude/SDL
+ls /usr/include/SDL
+SDL/  SDL2/
 
 Install:
 sudo apt-get update
