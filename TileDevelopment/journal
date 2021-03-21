@@ -17,14 +17,14 @@ It makes me want to go back and watch the early videos.
 
 ------------
 Connections:
-Power: The ITC-PI connector can go on any of the six ITC connections. You just have to be careful to get the keying correct and get it seated properly.
+Power: The ITC-PI connector can go on any of the six ITC connections.
+be careful to get the keying correct and get it seated properly.
 
 I used the spot below the NE corner.
 
 ---------
 Ethernet:
 RJ45 was connected before boot.
-(hmm, BeagleBoard Green's do not have Ethernet)
 
 ----
 SSH:
@@ -44,23 +44,22 @@ Logged in and got a shell
 
 ---------
 Shutdown:
-I used sudo shutdown -h now
-Have yet to try a Power down
-
+I use sudo shutdown -h now
+Power down running with seeds
+and events processing - fine.
 
 ----
 SDL:
-The SDL is installed on the Beagle Bone
+Both SDL and SDL2 are installed on the Tile (Beagle Bone)
 /usr/iclude/SDL
 
-I will use apt-get install to install
-the SDL2
+Install:
+sudo apt-get update
+sudo apt-get install libsdl2-2.0 --fix-missing
+sudo apt-get install libsdl2-dev 
 
-I am going to install these packages:
-libsdl2-2.0
-and
-libsdl2-dev
-(My branch already needs these and more but it needed synth stuff)
+These packages ( and dependencies ) were installed:
+libsdl2-2.0, libsdl2-dev
 
 ------
 SPACE:
@@ -76,8 +75,19 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           242M     0  242M   0% /sys/fs/cgroup
 tmpfs            49M     0   49M   0% /run/user/1001
 
-The SDL2 is pretty small. I think it would fit.
-I could always remove SDL.
+After SDL instal of libsdl2-2.0 and libsdl2-dev
+t2@beaglebone:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            214M     0  214M   0% /dev
+tmpfs            49M  2.2M   47M   5% /run
+/dev/mmcblk1p1  3.5G  3.1G  151M  96% /
+tmpfs           242M     0  242M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           242M     0  242M   0% /sys/fs/cgroup
+tmpfs            49M     0   49M   0% /run/user/1001
+t2@beaglebone:~$
+
+272M  to 151M  Free
 
 -----
 LIBS for SDL2 work:
