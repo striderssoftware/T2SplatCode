@@ -119,6 +119,14 @@ serial or ssh connections will work,
 and cdm would be running
 
 ----------
+Branch:
+the head repo URL is:
+https://github.com/DaveAckley/MFM.git
+
+03/19/2021
+On this date the Head repo was merged into my branch.
+
+----------
 Code Changes:
 
 I have checked in a first pass
@@ -126,11 +134,46 @@ all the headers were changed.
 creating screens and windows was changed.
 
 ----------
-Branch:
-the head repo URL is:
-https://github.com/DaveAckley/MFM.git
+The actual port to SDL2.
 
-03/19/2021
-I did a practice merge of the head repo,
-the conflicts looked managable.
+-- error ------
+In file included from include/../../aui/include/Audio.h:18,
+                 from include/EventWindow.h:42,
+                 from include/EventHistoryBuffer.tcc:4,
+                 from include/EventHistoryBuffer.h:386,
+                 from include/CacheProcessor.tcc:5,
+                 from include/CacheProcessor.h:547,
+                 from include/PacketIO.tcc:3,
+                 from include/PacketIO.h:80,
+                 from src/ChannelEnd.cpp:2:
+include/../../aui/include/Synth.h:5:10: fatal error: SDL2/SDL_ttf.h: No such file or directory
+ #include <SDL2/SDL_ttf.h>
+
+-- fix -----
+/usr/include/SDL2/ was missing
+SDL_ttf.h
+ran
+sudo apt-get install libsdl-ttf2.0-dev
+that did not fix it.
+
+Hand copied a SDL_tff.h from my ubuntu VM.
+
+That fixed those errors.
+
+
+
+--- error ----
+getting this:
+n file included from /usr/include/c++/8/bits/move.h:55,
+                 from /usr/include/c++/8/bits/nested_exception.h:40,
+                 from /usr/include/c++/8/exception:144,
+                 from ../../src/platform-tile/include/FailPlatformSpecific.h:8,
+                 from include/Fail.h:30,
+                 from src/Fail.cpp:2:
+/usr/include/c++/8/type_traits:1752:3: error: template with C linkage
+   template<typename _Tp>
+
+-- fix -- 
+c++ 11
+
 
