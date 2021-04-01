@@ -58,9 +58,10 @@ Install:
 sudo apt-get update
 sudo apt-get install libsdl2-2.0 --fix-missing
 sudo apt-get install libsdl2-dev 
+sudo apt install libsdl2-image-dev
 
 These packages ( and dependencies ) were installed:
-libsdl2-2.0, libsdl2-dev
+libsdl2-2.0, libsdl2-dev, libsdl2-image-dev
 
 ------
 SPACE:
@@ -153,7 +154,7 @@ include/../../aui/include/Synth.h:5:10: fatal error: SDL2/SDL_ttf.h: No such fil
 /usr/include/SDL2/ was missing
 SDL_ttf.h
 ran
-sudo apt-get install libsdl-ttf2.0-dev
+sudo apt-get install libsdl-ttf2.0-dev --fix-missing
 that did not fix it.
 
 Hand copied a SDL_tff.h from my ubuntu VM.
@@ -161,24 +162,34 @@ Hand copied a SDL_tff.h from my ubuntu VM.
 That fixed those errors.
 
 
+--- error ----
+misiing a package
+libsdl2-image-dev
+was installed
+--------------
+
 
 --- error ----
-getting this:
+This file:
+MFM/src/core/src/Fail.cpp
+(Ha Ha) fails because of the "extern "C" {"
+block/statement.
 
-g++ -O99 --param inline-unit-growth=1000 --param large-function-growth=50000  -ansi -pedantic -D SHARED_DIR=\"/home/t2/strider/mybuilds/MFM\" -pthread -Wno-parentheses -std=c++11  -I ../../src/platform-tile/include  -I include  -DMFM_BUILD_DATE=0x20210327 -DMFM_BUILD_TIME=0x025624 -DMFM_BUILT_BY=t2 -DMFM_BUILT_ON=beaglebone -DMFM_VERSION_MAJOR=5 -DMFM_VERSION_MINOR=0 -DMFM_VERSION_REV=5 -DMFM_TREE_VERSION="v5.0.4-372-g2ad4a663" -DDEBIAN_PACKAGE_NAME="ulam" -DMAGIC_DEBIAN_PACKAGE_VERSION="" -c -MMD -MP -MF"../../build/core/Fail.d" -MT"../../build/core/Fail.o" -MT"../../build/core/Fail.d" -o"../../build/core/Fail.o" "src/Fail.cpp"
-In file included from /usr/include/c++/8/bits/nested_exception.h:40,
-                 from /usr/include/c++/8/exception:144,
-                 from ../../src/platform-tile/include/FailPlatformSpecific.h:8,
-                 from include/Fail.h:30,
-                 from src/Fail.cpp:2:
-/usr/include/c++/8/bits/move.h:45:3: error: template with C linkage
-   template<typename _Tp>
-   ^~~~~~~~
+--error---
 src/Fail.cpp:1:1: note: ‚Äòextern "C"‚Äô linkage started here
  extern "C" {
- ^~~~~~~~~~
+----------
 
--- fix -- 
-c++ 11 
+That same file compiles on the Tile when building from head repo.
+
+That same file compiles when building in my Ubuntu VM
+That same file causes build failures on the Tile building my Repo.
+
+so I am looking for platform specific switches in some
+Makefile dealing with core that are in the Head repo but missing
+from my repo.
+
+
+
 
 
