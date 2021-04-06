@@ -164,30 +164,35 @@ That fixed those errors.
 
 --- error ----
 misiing a package
+------ fix ----
 libsdl2-image-dev
 was installed
 --------------
 
-
 --- error ----
 This file:
 MFM/src/core/src/Fail.cpp
-(Ha Ha) fails because of the "extern "C" {"
+fails because of the "extern "C" {"
 block/statement.
 
---error---
 src/Fail.cpp:1:1: note: ‚Äòextern "C"‚Äô linkage started here
  extern "C" {
-----------
 
-That same file compiles on the Tile when building from head repo.
+------ fix ----
+ifdef std11 on platform:
+In:
+config/Makvars.mk
+ifneq ($(PLATFORM),tile)
+ COMMON_CPPFLAGS+= -std=c++11
+endif
+ 
+---- error -----
+UlamElement.tcc:42:33: error: ‚ÄòAudioState‚Äô is not a class or namespace
 
-That same file compiles when building in my Ubuntu VM
-That same file causes build failures on the Tile building my Repo.
+--- fix -----
+not yet but
+good an expected SDL2 error
 
-so I am looking for platform specific switches in some
-Makefile dealing with core that are in the Head repo but missing
-from my repo.
 
 
 
