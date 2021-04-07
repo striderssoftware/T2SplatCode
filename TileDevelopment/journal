@@ -190,8 +190,17 @@ endif
 UlamElement.tcc:42:33: error: ‚ÄòAudioState‚Äô is not a class or namespace
 
 --- fix -----
-not yet but
-good an expected SDL2 error
+Extend the ifdef's around NOT building the AUI lib
+
+
+---- error -----
+getting expected errors in mfmt2 about SDL2
+
+--- fix -----
+knocking those off one by one.
+
+
+
 
 
 
