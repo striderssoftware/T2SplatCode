@@ -94,7 +94,6 @@ t2@beaglebone:~$
 -----
 LIBS for SDL2 work:
 MFM/src/drivers/mfmt2/
-MFM/src/t2lib
 
 ---------
 Building:
