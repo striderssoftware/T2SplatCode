@@ -198,8 +198,15 @@ getting expected errors in mfmt2 about SDL2
 --- fix -----
 knocking those off one by one.
 
+---- error -----
+g++ -Wl,--fatal-warnings -pthread -Wl,--fatal-warnings -pthread -rdynamic ../../../build/mfmt2/mfmt2.o -L ../../../build/mfmt2 -L ../../../build/core/ -L ../../../build/elements/ -L ../../../build/sim -L ../../../build/gui/ -L /home/t2/T2-12/base/apps/tnv -L ../../../build/t2lib -lmfmmfmt2 -lmfmt2lib -lt2adc -lmfmgui -lmfmsim -Wl,--whole-archive -lmfmcore -Wl,--no-whole-archive -lSDL2 -lSDL2_ttf -lSDL2_image -lpng -lm -lrt -ldl -lrt -ldl -L ../../../build/platform-tile -l mfmplatform-tile -l mfmcore  -o ../../../bin/mfmt2
+/usr/bin/ld: cannot find -lSDL2_ttf
+collect2: error: ld returned 1 exit status
 
-
+--- fix ------
+This is probobly related to the "hand copying" of the SDL_ttf.h
+I will retry to install the
+libsdl-ttf2.0-dev package.
 
 
 
