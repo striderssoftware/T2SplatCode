@@ -1,4 +1,7 @@
 
+This document pertains to this branch:
+https://github.com/striderssoftware/MFM.git
+
 Here is a link to first boot video:
 https://www.youtube.com/watch?v=ado3UpO7Sgw
 
@@ -33,7 +36,6 @@ SecureCRT
 Looked at my DHCP table to find the ip.
 
 Logged in and got a shell
-
 
 -------
 Serial:
@@ -128,15 +130,18 @@ https://github.com/DaveAckley/MFM.git
 03/19/2021
 On this date the Head repo was merged into my branch.
 
-----------
+-------------
 Code Changes:
 
-I have checked in a first pass
-all the headers were changed.
-creating screens and windows was changed.
+The actual port of mfmt2 to SDL2.
 
-----------
-The actual port to SDL2.
+This commit started the SDL2 Port of mfmt2:
+76d9a1022d4078a46046c9bc7cc8dc3b36dd7246
+Headers were changed.
+creating screens and windows was changed.
+Then commits with more Makefile and header changes.
+
+and then...
 
 -- error ------
 In file included from include/../../aui/include/Audio.h:18,
@@ -214,4 +219,4 @@ libsdl-ttf2.0-dev package.
 Installed: libsdl2-ttf-dev
 instead of or in addition to libsdl-ttf2.0-dev 
 
-
+**** Successfull build on the T2 Tile ****
