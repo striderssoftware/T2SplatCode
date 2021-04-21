@@ -220,3 +220,10 @@ Installed: libsdl2-ttf-dev
 instead of or in addition to libsdl-ttf2.0-dev 
 
 **** Successfull build on the T2 Tile ****
+
+----Runtime --errors ----
+pr 17 22:57:16 beaglebone mfm.sh[1814]: 15: MSG: SDL early startup
+Apr 17 22:57:16 beaglebone mfm.sh[1814]: 16: ERR: SDL_Init(0x21) failed: fbcon not available
+Apr 17 22:57:16 beaglebone mfm.sh[1814]: src/SDLI.cpp:228: FAILED: ILLEGAL_STATE
+Apr 17 22:57:16 beaglebone mfm.sh[1814]: Failed out of main
+
