@@ -227,3 +227,37 @@ Apr 17 22:57:16 beaglebone mfm.sh[1814]: 16: ERR: SDL_Init(0x21) failed: fbcon n
 Apr 17 22:57:16 beaglebone mfm.sh[1814]: src/SDLI.cpp:228: FAILED: ILLEGAL_STATE
 Apr 17 22:57:16 beaglebone mfm.sh[1814]: Failed out of main
 
+---- Latest --------
+I have two small SDL test apps,
+one SDL
+one SDL2
+
+Both run succesfully in an Ubuntu VM.
+
+--on the tile--
+The SDL app runs fine as root
+if I run as non root I get:
+SDL_Init Error
+Unable to open a console terminal
+
+the SDL2 app fails with:
+ERR: SDL_Init(0x21) failed: fbcon not available
+
+or if SDL_VIDEODRIVER is not defined (should try all available formats):
+SDL_Init Error
+No available video device 
+
+
+sudo lshw -c video
+gives no video info.
+
+I need to find out the touchscreen
+video information.
+
+I need to find out if the SDL
+on the TIle was built/configured with particular
+Video driver support.
+
+
+
+
