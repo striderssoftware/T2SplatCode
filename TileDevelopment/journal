@@ -259,5 +259,20 @@ on the TIle was built/configured with particular
 Video driver support.
 
 
+the SDL2 no longer has a target (support for)
+for File Buffer usage i.e.
+AC_DEFINE(SDL_VIDEO_RENDER_DIRECTFB, 1, [ ])
+
+--- possible fix ------
+Use SDL2 with the DirectFB package.
+https://github.com/deniskropp
+GNU LESSER GENERAL PUBLIC LICENSE
+
+Installing the DirectFB package
+and the flux (needed by DirectFB)
+
+(needed to install)
+libtool
+
 
 
