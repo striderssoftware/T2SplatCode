@@ -7,7 +7,7 @@ ALLDEP = Makefile
 CC = g++
 CCFLAGS = -g -Wall -pedantic -std=c++17
 CXXFLAGS =
-INCL =  
+INCL += $(shell sdl2-config --cflags)
 LDFLAGS =
 LIBS = -lSDL2
 
