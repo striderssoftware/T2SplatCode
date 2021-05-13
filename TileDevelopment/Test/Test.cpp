@@ -7,6 +7,7 @@
 #include <unistd.h> 
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 
 using namespace std;
 
@@ -48,11 +49,12 @@ int main()
       cout << SDL_GetError() << endl;
     }
 
+  cout << "got a window" <<endl;
 
   SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
 
   // Select the color for drawing. It is set to red here.
-  //SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
+  SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
   
   // Clear the entire screen to our selected color.
   SDL_RenderClear(renderer);
@@ -60,6 +62,8 @@ int main()
   SDL_Surface* image = SDL_LoadBMP("/MagicTheature.bmp");
   SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, image);
   SDL_RenderCopy(renderer, texture, NULL, NULL);
+
+  cout << "so far so good" << endl;
   
   // Up until now everything was drawn behind the scenes.
   // This will show the new, red contents of the window.
@@ -74,6 +78,10 @@ int main()
   SDL_FreeSurface(image);
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(window);
+  TTF_Quit();
   SDL_Quit();
+
+
+
 }
 

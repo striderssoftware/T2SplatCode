@@ -9,7 +9,7 @@ CCFLAGS = -g -Wall -pedantic -std=c++17
 CXXFLAGS =
 INCL += $(shell sdl2-config --cflags)
 LDFLAGS =
-LIBS = -lSDL2
+LIBS = -lSDL2 -lSDL2_ttf
 
 # A makefile comment                                           
 
