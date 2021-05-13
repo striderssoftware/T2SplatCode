@@ -59,20 +59,22 @@ int main()
   // Clear the entire screen to our selected color.
   SDL_RenderClear(renderer);
 
-  SDL_Surface* image = SDL_LoadBMP("/MagicTheature.bmp");
-  SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, image);
-  SDL_RenderCopy(renderer, texture, NULL, NULL);
-
   cout << "so far so good" << endl;
   
   // Up until now everything was drawn behind the scenes.
   // This will show the new, red contents of the window.
-  SDL_RenderPresent(renderer);
+  SDL_RenderPresent(renderer);  
+  SDL_UpdateWindowSurface(window);
+  SDL_Delay(3000);
   
+  SDL_Surface* image = SDL_LoadBMP("/MagicTheature.bmp");
+  SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, image);
+  SDL_RenderCopy(renderer, texture, NULL, NULL);
 
+  SDL_RenderPresent(renderer);  
   SDL_UpdateWindowSurface(window);
   SDL_Delay(9000);
-
+  
 
   SDL_DestroyTexture(texture);
   SDL_FreeSurface(image);
@@ -80,8 +82,6 @@ int main()
   SDL_DestroyWindow(window);
   TTF_Quit();
   SDL_Quit();
-
-
 
 }
 
