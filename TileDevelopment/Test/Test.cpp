@@ -67,7 +67,7 @@ int main()
   SDL_UpdateWindowSurface(window);
   SDL_Delay(3000);
   
-  SDL_Surface* image = SDL_LoadBMP("/MagicTheature.bmp");
+  SDL_Surface* image = SDL_LoadBMP("./test.bmp");
   SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, image);
   SDL_RenderCopy(renderer, texture, NULL, NULL);
 
