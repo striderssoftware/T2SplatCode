@@ -43,13 +43,13 @@ int main()
   // Create stuff
    SDL_Window * window = SDL_CreateWindow("woo woo",
         SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-        640, 480,
+        480, 320,
         SDL_WINDOW_RESIZABLE);
 
 
    // Set every pixel.
    SDL_Surface * window_surface = SDL_GetWindowSurface(window);
-   SDL_Surface* image = SDL_LoadBMP("./MagicTheature640x480.bmp");      
+   SDL_Surface* image = SDL_LoadBMP("./MagicTheature480x320.bmp");      
    int width = image->w;
    int height = image->h;
    unsigned int * surfacePixels=  (unsigned int*)window_surface->pixels;
