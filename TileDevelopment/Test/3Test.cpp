@@ -49,7 +49,7 @@ int main()
 
    // Set every pixel.
    SDL_Surface * window_surface = SDL_GetWindowSurface(window);
-   SDL_Surface* image = SDL_LoadBMP("./MagicTheature.bmp");      
+   SDL_Surface* image = SDL_LoadBMP("./MagicTheature720x480.bmp");      
    //int width = image->w;
    //int height = image->h;  //6700 opt
    int width = window_surface->w;
@@ -77,7 +77,7 @@ int main()
    SDL_UpdateWindowSurface(window);
    
    
-   SDL_Delay(5000);
+   SDL_Delay(9000);
    
    
    SDL_DestroyWindow(window);
