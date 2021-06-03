@@ -67,6 +67,11 @@ sudo apt-get install libsdl2-ttf-dev
 These packages ( and dependencies ) were installed:
 libsdl2-2.0, libsdl2-dev, libsdl2-image-dev, libsdl2-ttf-dev
 
+
+Install commands:
+sudo apt-get update
+sudo apt-get install libsdl2-2.0 --fix-missing libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
+
 ------
 SPACE:
 it is pretty limited:
@@ -289,4 +294,28 @@ debugfs  /sys/kernel/debug  debugfs  defaults  0  0
 /dev/mmcblk0p1 /media/mySDCard auto defaults  0 2
 
 ----
+
+
+DirectFB compile fails with:
+
+
+make[4]: Entering directory '/media/mySDCard/DirectFB/lib/direct'
+  CXX      Base.lo
+In file included from /usr/include/c++/8/bits/stl_algobase.h:63,
+                 from /usr/include/c++/8/bits/stl_tree.h:63,
+                 from /usr/include/c++/8/map:60,
+                 from ../../lib/direct/Types++.h:41,
+                 from ./string.h:37,
+                 from ../../lib/direct/os/linux/glibc/types.h:43,
+                 from ../../lib/direct/os/types.h:47,
+                 from ../../lib/direct/os/clock.h:36,
+                 from ../../lib/direct/clock.h:36,
+                 from ../../lib/direct/debug.h:38,
+                 from Base.cpp:39:
+/usr/include/c++/8/ext/numeric_traits.h:54:3: error: template with C linkage
+   template<typename _Value>
+   ^~~~~~~~
+Base.cpp:38:1: note: ‚Äòextern "C"‚Äô linkage started here
+ extern "C" {
+
 
